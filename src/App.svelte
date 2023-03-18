@@ -1,6 +1,7 @@
 
 <script>
   	import Map from './components/Map.svelte';
+	import contentData from "./data/test-content-2.json";
 
 	import Scroller from '@sveltejs/svelte-scroller';
 	// import LoremIpsum from './LoremIpsum.svelte';
@@ -39,11 +40,11 @@
 		</div>
 
 		<div slot="foreground" style="padding: 0 0 0 50%;">
-			<section><h2>Trans-Java Toll road</h2></section>
-			<section><p>In 2014, we didn't have that many toll roads in Java.</p></section>
-			<section><p>Since 2014, xx more km of toll roads have been operating.</p></section>
-			<section><p>section 4</p></section>
-			<section><p>section 5</p></section>
+
+			{#each contentData as content}
+			<section><p>{content.text}</p></section>
+			{/each}
+
 		</div>
 	</Scroller>
 
