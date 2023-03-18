@@ -1,6 +1,8 @@
 <script>
   import allTollRoadData from "./../data/java-toll-data.json";
-  import contentData from "./../data/test-content.json";
+
+  import restArea from "./../data/rest-area.json";
+  import contentData from "./../data/test-content-2.json";
 
   import { onMount, onDestroy } from "svelte";
   // import { Map, NavigationControl, Popup, FlyToOptions } from 'maplibre-gl';
@@ -10,6 +12,8 @@
   let mapContainer;
   export let index = 0;
   let slideContent;
+
+  let allLayerId = ['rest-areas']
 
   onMount(() => {
     const initialState = { lng: 110.5, lat: -7.6, zoom: 6.5 };
@@ -27,6 +31,11 @@
         data: allTollRoadData,
       });
 
+      map.addSource("rest-areas", {
+        type: "geojson",
+        data: restArea,
+      });
+
       map.addLayer({
         id: "all_toll_roads",
         type: "line",
@@ -38,9 +47,18 @@
         paint: {
           "line-color": "#06BCC1",
           "line-width": 3,
-          "line-opacity": 0.5,
         },
       });
+      map.addLayer({
+        'id': 'rest-areas',
+        'type': 'circle',
+        'source': 'rest-areas',
+        paint: {
+          "circle-color": "#12263A",
+          "circle-opacity": 0
+        },
+        });
+
     });
   });
   onDestroy(() => {
@@ -52,10 +70,29 @@
     map.flyTo({
       center: [slideContent.lng, slideContent.lat],
       zoom: slideContent.zoom,
-      essential: true, // this animation is considered essential with respect to prefers-reduced-motion
+      essential: true,
     });
 
-  map.setFilter('all_toll_roads', slideContent.filter)
+    if (slideContent.tolls_filter) {
+
+    map.setFilter('all_toll_roads', slideContent.tolls_filter)
+    }
+
+    if (slideContent.other_layers.length > 0) {
+
+      allLayerId.forEach(layer => {
+        if (slideContent.other_layers.includes(layer)){
+          map.setPaintProperty(layer, 'circle-opacity', 1)
+        } else {
+        map.setPaintProperty(layer, 'circle-opacity', 0)
+        }
+      })
+    } else {
+      // remove all layers
+      allLayerId.forEach(layer => {
+        map.setPaintProperty(layer, 'circle-opacity', 0)
+      })
+    }
   }
 </script>
 
