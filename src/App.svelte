@@ -40,8 +40,8 @@
 
 		<div slot="foreground" style="padding: 0 0 0 50%;">
 			<section><h2>Trans-Java Toll road</h2></section>
-			<section><p>Test scrolly first slide</p></section>
-			<section><p>Zoom in on Pejagan-Pemalang rest areas</p></section>
+			<section><p>In 2014, we didn't have that many toll roads in Java.</p></section>
+			<section><p>Since 2014, xx more km of toll roads have been operating.</p></section>
 			<section><p>section 4</p></section>
 			<section><p>section 5</p></section>
 		</div>

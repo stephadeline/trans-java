@@ -1,0 +1,43 @@
+[
+  {
+    "slide_index": 0,
+    "text": "Impact of Toll Java Toll Road",
+    "inline_image": "",
+    "style": "headline",
+    "zoom": "6.5",
+    "lng": "110.5",
+    "lat": "-7.6",
+    "layer": "allTollRoadData",
+    "filter": ""
+  },
+  {
+    "slide_index": 1,
+    "text": "In 2014, we had toll roads xx",
+    "inline_image": "",
+    "style": "paragraph",
+    "zoom": "6.5",
+    "lng": "110.5",
+    "lat": "-7.6",
+    "layer": "allTollRoadData",
+    "filter": [
+      "<=",
+      "yearnum",
+      2014
+    ]
+  },
+  {
+    "slide_index": 2,
+    "text": "Since 2014...",
+    "inline_image": "",
+    "style": "paragraph",
+    "zoom": "6.5",
+    "lng": "110.5",
+    "lat": "-7.6",
+    "layer": "allTollRoadData",
+    "filter": [
+      "<=",
+      "yearnum",
+      2022
+    ]
+  }
+]
