@@ -2,6 +2,8 @@
 <script>
   	import Map from './components/Map.svelte';
 	import contentData from "./data/test-content-2.json";
+	import RangePlayback from './components/RangePlayback.svelte';
+
 
 	import Scroller from '@sveltejs/svelte-scroller';
 	// import LoremIpsum from './LoremIpsum.svelte';
@@ -11,10 +13,12 @@
 	let index;
 	let offset;
 	let progress;
-	let top = 0.1;
+	let top = 0;
 	let threshold = 0.5;
-	let bottom = 0.9;
+	let bottom = 0;
+	let selectedYear = 2014;
 </script>
+
 
 <div class='demo'>
 
@@ -36,13 +40,27 @@
 
 			<p>total progress</p>
 			<progress value={progress || 0}></progress> -->
-      <Map {index}/>
+      <Map {index} {selectedYear}/>
 		</div>
 
-		<div slot="foreground" style="padding: 0 0 0 50%;">
+		<div slot="foreground">
 
 			{#each contentData as content}
-			<section><p>{content.text}</p></section>
+			<section class={content.class}>
+				<div class="scroll-content">
+				{#if content.class === "headline"}
+				<h1 class="headline">{content.text}</h1>
+				{:else}
+				<p>{content.text}</p>
+				{/if}
+				{#if content.slider === "TRUE"}
+				<div class="year-controls">
+					<div>{selectedYear}</div>
+				<RangePlayback min={1978} max={2021} bind:value={selectedYear} />
+				</div>
+				{/if}
+			</div>
+			</section>
 			{/each}
 
 		</div>
@@ -54,19 +72,20 @@
 	<DraggableLabel bind:value={threshold} label="threshold"/>
 	<DraggableLabel bind:value={bottom} label="bottom"/> -->
 </div>
+<p>This is an explanation</p>
+
 
 <style>
 	/* .demo {
 		padding: 0 100px 0 0;
-	}
+	} */
 	
-	[slot="background"] {
+	/* [slot="background"] {
 		background-color: rgba(255,62,0,0.05);
 		border-top: 2px solid #ff3e00;
 		border-bottom: 2px solid #ff3e00;
 		font-size: 1.4em;
 		overflow: hidden;
-		padding: 1em;
 	} */
 	
 	[slot="background"] p {
@@ -82,15 +101,45 @@
 	}
 	
 	section {
+		margin: 0 auto;
 		height: 120vh;
 		/* background-color: rgba(0,0,0,0.5); */
 		/* color: white; */
 		padding: 1em;
+		/* background: white; */
+
 		/* margin: 0 0 2em 0; */
 	}
 
-  p {
-    background: white;
+	section.paragraph {
+		max-width: 400px;
+
+	}
+
+	section.headline {
+		max-width: 700px;
+	}
+	div.scroll-content {
+		padding: 20px;
+
+	}
+
+	section.paragraph div.scroll-content {
+		background: rgba(255,255,255,0.8);
+	}
+
+
+
+
+	.year-controls {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		column-gap: 10px;
+	}
+
+
+  /* p {
     padding: 10px;
-  }
+  } */
 </style>

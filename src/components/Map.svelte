@@ -8,19 +8,22 @@
   // import { Map, NavigationControl, Popup, FlyToOptions } from 'maplibre-gl';
   import maplibregl from "maplibre-gl";
   import "maplibre-gl/dist/maplibre-gl.css";
+
+  export let selectedYear = 2014;
+  export let index = 0;
+
   let map;
   let mapContainer;
-  export let index = 0;
   let slideContent;
 
   let allLayerId = ['rest-areas']
 
   onMount(() => {
-    const initialState = { lng: 110.5, lat: -7.6, zoom: 6.5 };
+    const initialState = { lng: 110.5, lat: -6.8, zoom: 6.5 };
 
     map = new maplibregl.Map({
       container: mapContainer,
-      style: `https://api.maptiler.com/maps/dataviz/style.json?key=LWQbv5QsKtTV1ZJnSbQf`,
+      style: `https://api.maptiler.com/maps/bright-v2/style.json?key=LWQbv5QsKtTV1ZJnSbQf`,
       center: [initialState.lng, initialState.lat],
       zoom: initialState.zoom,
     });
@@ -45,8 +48,9 @@
           "line-cap": "round",
         },
         paint: {
-          "line-color": "#06BCC1",
+          "line-color": "#FF8200",
           "line-width": 3,
+          
         },
       });
       map.addLayer({
@@ -54,7 +58,7 @@
         'type': 'circle',
         'source': 'rest-areas',
         paint: {
-          "circle-color": "#12263A",
+          "circle-color": "#06BCC1",
           "circle-opacity": 0
         },
         });
@@ -76,6 +80,9 @@
     if (slideContent.tolls_filter) {
 
     map.setFilter('all_toll_roads', slideContent.tolls_filter)
+    } else {
+      map.setFilter('all_toll_roads', ['has', 'yearnum'])
+
     }
 
     if (slideContent.other_layers.length > 0) {
@@ -93,7 +100,21 @@
         map.setPaintProperty(layer, 'circle-opacity', 0)
       })
     }
+
+    if (slideContent.style) {
+      map.setPaintProperty(slideContent.style_layer, slideContent.style_property, slideContent.style)
+    }
+    if (selectedYear) {
+    if (slideContent.slider === "TRUE") {
+      map.setFilter('all_toll_roads', ["<=", "yearnum", selectedYear])
+    }
   }
+
+  }
+
+
+
+
 </script>
 
 <div class="map-wrap">
@@ -104,9 +125,7 @@
   .map-wrap {
     position: relative;
     width: 100%;
-    height: calc(
-      100vh - 77px
-    ); /* calculate height of the screen minus the heading */
+    height: 100vh /* calculate height of the screen minus the heading */
   }
   .map {
     position: absolute;
