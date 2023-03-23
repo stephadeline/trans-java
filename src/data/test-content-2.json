@@ -1,7 +1,7 @@
 [
   {
     "slide_index": 0,
-    "text": "Impact of Trans-Java Toll Road",
+    "text": "Impact of Toll Java Toll Road",
     "inline_image": "",
     "class": "headline",
     "zoom": 6.5,
@@ -11,6 +11,8 @@
     "slider": "FALSE",
     "tolls_filter": "",
     "other_layers": "",
+    "other_line_layers": "",
+    "raster_layers": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
@@ -22,11 +24,13 @@
     "class": "paragraph",
     "zoom": 6.5,
     "lng": 110.5,
-    "lat": -6.8,
+    "lat": -7.6,
     "show_tolls": "TRUE",
     "slider": "FALSE",
     "tolls_filter": "",
     "other_layers": "",
+    "other_line_layers": "",
+    "raster_layers": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
@@ -38,7 +42,7 @@
     "class": "paragraph",
     "zoom": 6.5,
     "lng": 110.5,
-    "lat": -6.8,
+    "lat": -7.6,
     "show_tolls": "TRUE",
     "slider": "FALSE",
     "tolls_filter": [
@@ -47,6 +51,8 @@
       2014
     ],
     "other_layers": "",
+    "other_line_layers": "",
+    "raster_layers": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
@@ -67,6 +73,8 @@
       2023
     ],
     "other_layers": "",
+    "other_line_layers": "",
+    "raster_layers": "",
     "style_layer": "all_toll_roads",
     "style_property": "line-opacity",
     "style": [
@@ -82,11 +90,11 @@
   },
   {
     "slide_index": 4,
-    "text": "Lorem ipsum",
+    "text": "Along with toll-road constructions, rest areas",
     "inline_image": "",
     "class": "paragraph",
-    "zoom": 12,
-    "lng": 112,
+    "zoom": 6.5,
+    "lng": 110.5,
     "lat": -7.6,
     "show_tolls": "TRUE",
     "slider": "FALSE",
@@ -94,13 +102,15 @@
     "other_layers": [
       "rest-areas"
     ],
+    "other_line_layers": "",
+    "raster_layers": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
   },
   {
     "slide_index": 5,
-    "text": "Lorem ipsum",
+    "text": "And also toll-gates",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 6.5,
@@ -110,51 +120,18 @@
     "slider": "FALSE",
     "tolls_filter": "",
     "other_layers": [
-      "rest-areas"
+      "rest-areas",
+      "toll-gates"
     ],
+    "other_line_layers": "",
+    "raster_layers": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
   },
   {
     "slide_index": 6,
-    "text": "Lorem ipsum",
-    "inline_image": "",
-    "class": "paragraph",
-    "zoom": 12,
-    "lng": 110,
-    "lat": -7.6,
-    "show_tolls": "TRUE",
-    "slider": "FALSE",
-    "tolls_filter": "",
-    "other_layers": [
-      "rest-areas"
-    ],
-    "style_layer": "",
-    "style_property": "",
-    "style": ""
-  },
-  {
-    "slide_index": 7,
-    "text": "Lorem ipsum",
-    "inline_image": "",
-    "class": "paragraph",
-    "zoom": 12,
-    "lng": 110,
-    "lat": -7.6,
-    "show_tolls": "TRUE",
-    "slider": "FALSE",
-    "tolls_filter": "",
-    "other_layers": [
-      "rest-areas"
-    ],
-    "style_layer": "",
-    "style_property": "",
-    "style": ""
-  },
-  {
-    "slide_index": 8,
-    "text": "Lorem ipsum",
+    "text": "In addition, xxx more are planned to be built.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 6.5,
@@ -164,8 +141,276 @@
     "slider": "FALSE",
     "tolls_filter": "",
     "other_layers": [
-      "rest-areas"
+      "rest-areas",
+      "toll-gates"
     ],
+    "other_line_layers": [
+      "construction"
+    ],
+    "raster_layers": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": ""
+  },
+  {
+    "slide_index": 7,
+    "text": "The construction of toll roads have had several impacts xxx",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 6.5,
+    "lng": 110.5,
+    "lat": -7.6,
+    "show_tolls": "TRUE",
+    "slider": "FALSE",
+    "tolls_filter": "",
+    "other_layers": [
+      "rest-areas",
+      "toll-gates"
+    ],
+    "other_line_layers": "",
+    "raster_layers": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": ""
+  },
+  {
+    "slide_index": 8,
+    "text": "Let's zoom in on Tegal brebes",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 10.19,
+    "lng": 109.1264,
+    "lat": -6.8543,
+    "show_tolls": "TRUE",
+    "slider": "FALSE",
+    "tolls_filter": [
+      "==",
+      "nama_ruas",
+      "Pejagan - Pemalang"
+    ],
+    "other_layers": "",
+    "other_line_layers": "",
+    "raster_layers": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": ""
+  },
+  {
+    "slide_index": 9,
+    "text": "Timelapse of development",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 11.63,
+    "lng": 109.0574,
+    "lat": -6.8827,
+    "show_tolls": "FALSE",
+    "slider": "FALSE",
+    "tolls_filter": [
+      "==",
+      "nama_ruas",
+      "Pejagan - Pemalang"
+    ],
+    "other_layers": "",
+    "other_line_layers": "",
+    "raster_layers": [
+      "brebes-2014"
+    ],
+    "style_layer": "",
+    "style_property": "",
+    "style": ""
+  },
+  {
+    "slide_index": 10,
+    "text": "Along with it, came the rest area",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 11.63,
+    "lng": 109.0574,
+    "lat": -6.8827,
+    "show_tolls": "FALSE",
+    "slider": "FALSE",
+    "tolls_filter": [
+      "==",
+      "nama_ruas",
+      "Pejagan - Pemalang"
+    ],
+    "other_layers": "",
+    "other_line_layers": "",
+    "raster_layers": [
+      "brebes-2020"
+    ],
+    "style_layer": "",
+    "style_property": "",
+    "style": ""
+  },
+  {
+    "slide_index": 11,
+    "text": "Environment impact",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 10.19,
+    "lng": 109.1264,
+    "lat": -6.8543,
+    "show_tolls": "TRUE",
+    "slider": "FALSE",
+    "tolls_filter": [
+      "==",
+      "nama_ruas",
+      "Pejagan - Pemalang"
+    ],
+    "other_layers": "",
+    "other_line_layers": "",
+    "raster_layers": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": ""
+  },
+  {
+    "slide_index": 12,
+    "text": "Social impact",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 10.19,
+    "lng": 109.1264,
+    "lat": -6.8543,
+    "show_tolls": "TRUE",
+    "slider": "FALSE",
+    "tolls_filter": [
+      "==",
+      "nama_ruas",
+      "Pejagan - Pemalang"
+    ],
+    "other_layers": "",
+    "other_line_layers": "",
+    "raster_layers": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": ""
+  },
+  {
+    "slide_index": 13,
+    "text": "Zoom out",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 6.5,
+    "lng": 110.5,
+    "lat": -7.6,
+    "show_tolls": "TRUE",
+    "slider": "FALSE",
+    "tolls_filter": "",
+    "other_layers": "",
+    "other_line_layers": "",
+    "raster_layers": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": ""
+  },
+  {
+    "slide_index": 14,
+    "text": "Let's zoom in on Pasuruan-Probolinggo",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 9.94,
+    "lng": 113.0898,
+    "lat": -7.7213,
+    "show_tolls": "TRUE",
+    "slider": "FALSE",
+    "tolls_filter": [
+      "==",
+      "nama_ruas",
+      "Pasuruan - Probolinggo"
+    ],
+    "other_layers": "",
+    "other_line_layers": "",
+    "raster_layers": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": ""
+  },
+  {
+    "slide_index": 15,
+    "text": "Timelapse of development",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 9.94,
+    "lng": 113.0898,
+    "lat": -7.7213,
+    "show_tolls": "TRUE",
+    "slider": "FALSE",
+    "tolls_filter": [
+      "==",
+      "nama_ruas",
+      "Pasuruan - Probolinggo"
+    ],
+    "other_layers": "",
+    "other_line_layers": "",
+    "raster_layers": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": ""
+  },
+  {
+    "slide_index": 16,
+    "text": "Along with it, came the rest area",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 9.94,
+    "lng": 113.0898,
+    "lat": -7.7213,
+    "show_tolls": "TRUE",
+    "slider": "FALSE",
+    "tolls_filter": [
+      "==",
+      "nama_ruas",
+      "Pasuruan - Probolinggo"
+    ],
+    "other_layers": "",
+    "other_line_layers": "",
+    "raster_layers": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": ""
+  },
+  {
+    "slide_index": 17,
+    "text": "Environment impact",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 9.94,
+    "lng": 113.0898,
+    "lat": -7.7213,
+    "show_tolls": "TRUE",
+    "slider": "FALSE",
+    "tolls_filter": [
+      "==",
+      "nama_ruas",
+      "Pasuruan - Probolinggo"
+    ],
+    "other_layers": "",
+    "other_line_layers": "",
+    "raster_layers": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": ""
+  },
+  {
+    "slide_index": 18,
+    "text": "Social impact",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 9.94,
+    "lng": 113.0898,
+    "lat": -7.7213,
+    "show_tolls": "TRUE",
+    "slider": "FALSE",
+    "tolls_filter": [
+      "==",
+      "nama_ruas",
+      "Pasuruan - Probolinggo"
+    ],
+    "other_layers": "",
+    "other_line_layers": "",
+    "raster_layers": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
