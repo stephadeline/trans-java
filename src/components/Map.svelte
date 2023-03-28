@@ -25,7 +25,7 @@
 
   let allLayerId = ["rest-areas", "toll-gates"];
   let allLinesId = ["construction", "pantura"]
-  let allRaster = ["brebes-2014", "brebes-2020"]
+  let allRaster = ["brebes-2014", "brebes-2020", "brebes-2020-annotated"]
 
 
   onMount(() => {
@@ -82,6 +82,15 @@
           [ 109.4466456770897, -7.128575515704274 ], [ 108.3480128645897, -7.128575515704274 ],
         ]
     });
+    map.addSource("brebes-2020-annotated", {
+        "type": "image",
+        "url": "assets/brebes-2020-annotated.jpg",
+        "coordinates": [
+           [ 108.3480128645897, -6.6200220929638665 ],
+           [ 109.4466456770897, -6.6200220929638665 ],
+          [ 109.4466456770897, -7.128575515704274 ], [ 108.3480128645897, -7.128575515704274 ],
+        ]
+    });
 
     map.addLayer({
     "id": "brebes-2014",
@@ -95,6 +104,15 @@
 map.addLayer({
     "id": "brebes-2020",
     "source": "brebes-2020",
+    "type": "raster",
+    "paint": {
+        "raster-opacity": 0
+    }
+});
+
+map.addLayer({
+    "id": "brebes-2020-annotated",
+    "source": "brebes-2020-annotated",
     "type": "raster",
     "paint": {
         "raster-opacity": 0
@@ -266,6 +284,26 @@ map.addLayer({
         slideContent.style
       );
     }
+
+    if (slideContent.rest_area_filters) {
+      map.setFilter("rest-areas", slideContent.rest_area_filters);
+      // map.setLayoutProperty('rest-areas', 'text-field', [
+      // 'format',
+      // ['get', 'keterangan'],
+      // { 'font-scale': 1.2 },
+      // ]);
+    } else {
+      map.setFilter("rest-areas", ["has", "lat"]);
+
+    }
+
+    if (slideContent.toll_gates_filters) {
+      map.setFilter("toll-gates", slideContent.toll_gates_filters);
+    } else {
+      map.setFilter("toll-gates", ["has", "koord_x"]);
+
+    }
+
     if (selectedYear) {
       if (slideContent.slider === "TRUE") {
         map.setFilter("all_toll_roads", ["<=", "yearnum", selectedYear]);

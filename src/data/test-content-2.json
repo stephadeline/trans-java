@@ -17,11 +17,13 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 1,
-    "text": "This is some background info",
+    "text": "Just in the past few years, Indonesia has seen the number of toll-roads increased dramatically. Now in 2023, we have a toll-road connecting almost the entire island of Java.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 6.5,
@@ -37,11 +39,13 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 2,
-    "text": "In 2014, we had toll roads xx",
+    "text": "In 2014, the landscape was much different. The main road that drivers travelled through was still the Jl Pantura.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 6.5,
@@ -61,11 +65,13 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 3,
-    "text": "Since 2014...",
+    "text": "But since 2014, the island Java is much more connected, with xx km more toll roads in operation. Use the slider below to view when each toll route started operating.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 6.5,
@@ -94,11 +100,13 @@
       1,
       2014,
       0.5
-    ]
+    ],
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 4,
-    "text": "Along with toll-road constructions, rest areas",
+    "text": "The increase in toll roads also came with more rest areas for drivers to stop by and grab food or take a break...",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 6.5,
@@ -116,11 +124,13 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 5,
-    "text": "And also toll-gates",
+    "text": "As well as the construction of toll-gates, and roads that connect toll roads to other roads.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 6.5,
@@ -139,11 +149,13 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 6,
-    "text": "In addition, xxx more are planned to be built.",
+    "text": "In addition, more toll-roads are planned to be built.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 6.5,
@@ -164,7 +176,9 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 7,
@@ -187,11 +201,13 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 8,
-    "text": "The Pejagan-Pemalang route was recently completed in 2016.",
+    "text": "The Pejagan-Pemalang route was recently completed in 2016. Some context.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 10.19,
@@ -211,11 +227,13 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 9,
-    "text": "Click to see how the area developed.",
+    "text": "Click to see how the area developed, as seen from Landsat 8.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 11.26,
@@ -241,7 +259,9 @@
     ],
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 10,
@@ -270,22 +290,23 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 11,
     "text": "Particularly, Rest Area KM 260B, also known as Rest Area Heritage, is one of the popular destination stop for drivers.",
     "inline_image": "rest-area.gif",
     "class": "paragraph",
-    "zoom": 13.16,
-    "lng": 108.99638,
-    "lat": -6.90203,
+    "zoom": 11.26,
+    "lng": 109.0352,
+    "lat": -6.8736,
     "show_tolls": "FALSE",
     "slider": "FALSE",
     "tolls_filter": "",
     "other_layers": [
-      "rest-areas",
-      "toll-gates"
+      "rest-areas"
     ],
     "other_line_layers": "",
     "raster_layers": [
@@ -295,16 +316,22 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": [
+      "==",
+      "keterangan",
+      "Rest area heritage"
+    ],
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 12,
     "text": "The construction of toll road in this area led to the construction of other roads too. For example, in Jl. Pemuda, near Brebes, a road was built to connect the toll's exit gate to Jl. Pantura.",
     "inline_image": "",
     "class": "paragraph",
-    "zoom": 13.9,
-    "lng": 109.07387,
-    "lat": -6.88018,
+    "zoom": 11.26,
+    "lng": 109.0352,
+    "lat": -6.8736,
     "show_tolls": "FALSE",
     "slider": "FALSE",
     "tolls_filter": [
@@ -313,7 +340,6 @@
       "Pejagan - Pemalang"
     ],
     "other_layers": [
-      "rest-areas",
       "toll-gates"
     ],
     "other_line_layers": "",
@@ -324,21 +350,26 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": [
+      "==",
+      "keterangan",
+      "GT BREBES TIMUR"
+    ]
   },
   {
     "slide_index": 13,
     "text": "In this case, the road cut through agricultural land, as seen from Google Earth.",
     "inline_image": "jl-pemuda.gif",
     "class": "paragraph",
-    "zoom": 13.9,
-    "lng": 109.07387,
-    "lat": -6.88018,
+    "zoom": 11.26,
+    "lng": 109.0352,
+    "lat": -6.8736,
     "show_tolls": "FALSE",
     "slider": "FALSE",
     "tolls_filter": "",
     "other_layers": [
-      "rest-areas",
       "toll-gates"
     ],
     "other_line_layers": "",
@@ -349,16 +380,22 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": [
+      "==",
+      "keterangan",
+      "GT BREBES TIMUR"
+    ]
   },
   {
     "slide_index": 14,
     "text": "This area also saw some changes in businesses, for example, new stores were built...",
     "inline_image": "",
     "class": "paragraph",
-    "zoom": 13.9,
-    "lng": 109.07387,
-    "lat": -6.88018,
+    "zoom": 11.26,
+    "lng": 109.0352,
+    "lat": -6.8736,
     "show_tolls": "FALSE",
     "slider": "FALSE",
     "tolls_filter": "",
@@ -369,7 +406,9 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 15,
@@ -391,7 +430,9 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 16,
@@ -413,7 +454,9 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 17,
@@ -435,7 +478,9 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 18,
@@ -455,7 +500,9 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 19,
@@ -479,7 +526,9 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 20,
@@ -503,7 +552,9 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 21,
@@ -527,7 +578,9 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 22,
@@ -551,7 +604,9 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   },
   {
     "slide_index": 23,
@@ -575,6 +630,8 @@
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
-    "style": ""
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
   }
 ]

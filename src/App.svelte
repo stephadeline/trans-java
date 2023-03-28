@@ -53,6 +53,7 @@
 				<div class="scroll-content">
 				{#if content.class === "headline"}
 				<h1 class="headline">{content.text}</h1>
+				<p>By Stephanie Adeline</p>
 				{:else}
 				<p>{content.text}</p>
 
