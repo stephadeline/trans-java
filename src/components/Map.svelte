@@ -6,6 +6,8 @@
   import tollGates from "./../data/gerbang-tol.json";
 
   import underConstruction from "./../data/konstruksi.json";
+
+  import pantura from "./../data/pantura-brebes.json";
   import contentData from "./../data/test-content-2.json";
 
   import { onMount, onDestroy } from "svelte";
@@ -14,6 +16,7 @@
   import "maplibre-gl/dist/maplibre-gl.css";
 
   export let selectedYear = 2014;
+  export let rasterYear;
   export let index = 0;
 
   let map;
@@ -21,7 +24,7 @@
   let slideContent;
 
   let allLayerId = ["rest-areas", "toll-gates"];
-  let allLinesId = ["construction"]
+  let allLinesId = ["construction", "pantura"]
   let allRaster = ["brebes-2014", "brebes-2020"]
 
 
@@ -55,6 +58,12 @@
         type: "geojson",
         data: underConstruction,
       });
+
+      map.addSource("pantura", {
+        type: "geojson",
+        data: pantura,
+      });
+      
 
       map.addSource("brebes-2014", {
         "type": "image",
@@ -112,6 +121,11 @@ map.addLayer({
         paint: {
           "circle-color": "#06BCC1",
           "circle-opacity": 0,
+          "circle-stroke-color": "#06BCC1",
+          "circle-stroke-opacity": 0,
+          "circle-stroke-width": 1,
+          "circle-radius": 3,
+
         },
       });
 
@@ -122,6 +136,11 @@ map.addLayer({
         paint: {
           "circle-color": "#ef4123",
           "circle-opacity": 0,
+          "circle-stroke-color": "#ef4123",
+          "circle-stroke-opacity": 0,
+          "circle-stroke-width": 1,
+          "circle-radius": 3,
+          
         },
       });
 
@@ -137,6 +156,21 @@ map.addLayer({
           "line-color": "#FF8200",
           "line-width": 3,
           "line-dasharray": [0.1, 2],
+        },
+      });
+
+      map.addLayer({
+        id: "pantura",
+        type: "line",
+        source: "pantura",
+        layout: {
+          "line-join": "round",
+          "line-cap": "round",
+        },
+        paint: {
+          "line-color": "#FF8200",
+          "line-width": 3,
+          "line-opacity": 0,
         },
       });
     });
@@ -166,17 +200,32 @@ map.addLayer({
     }
 
     if (slideContent.other_layers.length > 0) {
+
+      let hasRaster = slideContent.raster_layers.length > 0
       allLayerId.forEach((layer) => {
         if (slideContent.other_layers.includes(layer)) {
+          if (slideContent.raster_layers.length > 0) {
+            map.setPaintProperty(layer, "circle-stroke-opacity", 1);
+            map.setPaintProperty(layer, "circle-opacity", 0);
+
+            map.setPaintProperty(layer, "circle-radius", 20);
+          } else {
           map.setPaintProperty(layer, "circle-opacity", 1);
+          map.setPaintProperty(layer, "circle-stroke-opacity", 0);
+          map.setPaintProperty(layer, "circle-radius", 3);
+          
+          }
         } else {
           map.setPaintProperty(layer, "circle-opacity", 0);
+          map.setPaintProperty(layer, "circle-stroke-opacity", 0);
+
         }
       });
     } else {
       // remove all layers
       allLayerId.forEach((layer) => {
         map.setPaintProperty(layer, "circle-opacity", 0);
+          map.setPaintProperty(layer, "circle-stroke-opacity", 0);
       });
     }
 
@@ -222,6 +271,29 @@ map.addLayer({
         map.setFilter("all_toll_roads", ["<=", "yearnum", selectedYear]);
       }
     }
+
+      if (slideContent.raster_slider === "TRUE" && rasterYear) {
+
+        let yearBefore = slideContent.raster_options[0]
+        let yearAfter = slideContent.raster_options[1]
+        let layerBefore = slideContent.raster_layers[0]
+        let layerAfter = slideContent.raster_layers[1]
+
+        switch (rasterYear) {
+          case yearBefore:
+          map.setPaintProperty(layerBefore, "raster-opacity", 1);
+          map.setPaintProperty(layerAfter, "raster-opacity", 0);
+          break;
+          case yearAfter:
+          map.setPaintProperty(layerAfter, "raster-opacity", 1);
+          map.setPaintProperty(layerBefore, "raster-opacity", 1);
+          break;
+          default:
+          map.setPaintProperty(layerAfter, "raster-opacity", 1);
+          map.setPaintProperty(layerBefore, "raster-opacity", 1);
+        }
+      }
+    
   }
 </script>
 

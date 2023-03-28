@@ -3,6 +3,7 @@
   	import Map from './components/Map.svelte';
 	import contentData from "./data/test-content-2.json";
 	import RangePlayback from './components/RangePlayback.svelte';
+	import Switch from './components/Switch.svelte';
 
 
 	import Scroller from '@sveltejs/svelte-scroller';
@@ -17,6 +18,8 @@
 	let threshold = 0.5;
 	let bottom = 0;
 	let selectedYear = 2014;
+
+	let rasterYear = 2020;
 </script>
 
 
@@ -40,7 +43,7 @@
 
 			<p>total progress</p>
 			<progress value={progress || 0}></progress> -->
-      <Map {index} {selectedYear}/>
+      <Map {index} {selectedYear} {rasterYear}/>
 		</div>
 
 		<div slot="foreground">
@@ -52,11 +55,20 @@
 				<h1 class="headline">{content.text}</h1>
 				{:else}
 				<p>{content.text}</p>
-				{/if}
+
+					{#if content.inline_image}
+					<img class="inline-image" src={"/assets/" + content.inline_image }/>
+					{/if}
+					{/if}
 				{#if content.slider === "TRUE"}
 				<div class="year-controls">
 					<div>{selectedYear}</div>
 				<RangePlayback min={1978} max={2021} bind:value={selectedYear} />
+				</div>
+				{/if}
+				{#if content.raster_slider === "TRUE"}
+				<div class="year-controls">
+				<Switch bind:value={rasterYear} design="multi"  label="Switch year" options={[content.raster_options[0], content.raster_options[1]]}/>
 				</div>
 				{/if}
 			</div>
@@ -101,7 +113,7 @@
 	}
 	
 	section {
-		margin: 0 auto;
+		margin: 0 0 0 auto;
 		height: 120vh;
 		/* background-color: rgba(0,0,0,0.5); */
 		/* color: white; */
@@ -114,6 +126,10 @@
 	section.paragraph {
 		max-width: 400px;
 
+	}
+	.inline-image {
+		max-width: 400px;
+		width: 100%;
 	}
 
 	section.headline {

@@ -1,7 +1,7 @@
 [
   {
     "slide_index": 0,
-    "text": "Impact of Toll Java Toll Road",
+    "text": "The Trans Java Toll Road",
     "inline_image": "",
     "class": "headline",
     "zoom": 6.5,
@@ -13,6 +13,8 @@
     "other_layers": "",
     "other_line_layers": "",
     "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
@@ -31,6 +33,8 @@
     "other_layers": "",
     "other_line_layers": "",
     "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
@@ -53,6 +57,8 @@
     "other_layers": "",
     "other_line_layers": "",
     "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
@@ -75,6 +81,8 @@
     "other_layers": "",
     "other_line_layers": "",
     "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
     "style_layer": "all_toll_roads",
     "style_property": "line-opacity",
     "style": [
@@ -104,6 +112,8 @@
     ],
     "other_line_layers": "",
     "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
@@ -125,6 +135,8 @@
     ],
     "other_line_layers": "",
     "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
@@ -148,6 +160,8 @@
       "construction"
     ],
     "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
@@ -169,13 +183,15 @@
     ],
     "other_line_layers": "",
     "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
   },
   {
     "slide_index": 8,
-    "text": "Let's zoom in on Tegal brebes",
+    "text": "The Pejagan-Pemalang route was recently completed in 2016.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 10.19,
@@ -191,18 +207,20 @@
     "other_layers": "",
     "other_line_layers": "",
     "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
   },
   {
     "slide_index": 9,
-    "text": "Timelapse of development",
+    "text": "Click to see how the area developed.",
     "inline_image": "",
     "class": "paragraph",
-    "zoom": 11.63,
-    "lng": 109.0574,
-    "lat": -6.8827,
+    "zoom": 11.26,
+    "lng": 109.0352,
+    "lat": -6.8736,
     "show_tolls": "FALSE",
     "slider": "FALSE",
     "tolls_filter": [
@@ -213,7 +231,13 @@
     "other_layers": "",
     "other_line_layers": "",
     "raster_layers": [
-      "brebes-2014"
+      "brebes-2014",
+      "brebes-2020"
+    ],
+    "raster_slider": "TRUE",
+    "raster_options": [
+      2014,
+      2020
     ],
     "style_layer": "",
     "style_property": "",
@@ -221,12 +245,12 @@
   },
   {
     "slide_index": 10,
-    "text": "Along with it, came the rest area",
+    "text": "Along with its development, came the rest area and the toll gates",
     "inline_image": "",
     "class": "paragraph",
-    "zoom": 11.63,
-    "lng": 109.0574,
-    "lat": -6.8827,
+    "zoom": 11.26,
+    "lng": 109.0352,
+    "lat": -6.8736,
     "show_tolls": "FALSE",
     "slider": "FALSE",
     "tolls_filter": [
@@ -234,62 +258,188 @@
       "nama_ruas",
       "Pejagan - Pemalang"
     ],
-    "other_layers": "",
+    "other_layers": [
+      "rest-areas",
+      "toll-gates"
+    ],
     "other_line_layers": "",
     "raster_layers": [
       "brebes-2020"
     ],
+    "raster_slider": "",
+    "raster_options": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
   },
   {
     "slide_index": 11,
-    "text": "Environment impact",
-    "inline_image": "",
+    "text": "Particularly, Rest Area KM 260B, also known as Rest Area Heritage, is one of the popular destination stop for drivers.",
+    "inline_image": "rest-area.gif",
     "class": "paragraph",
-    "zoom": 10.19,
-    "lng": 109.1264,
-    "lat": -6.8543,
-    "show_tolls": "TRUE",
+    "zoom": 13.16,
+    "lng": 108.99638,
+    "lat": -6.90203,
+    "show_tolls": "FALSE",
     "slider": "FALSE",
-    "tolls_filter": [
-      "==",
-      "nama_ruas",
-      "Pejagan - Pemalang"
+    "tolls_filter": "",
+    "other_layers": [
+      "rest-areas",
+      "toll-gates"
     ],
-    "other_layers": "",
     "other_line_layers": "",
-    "raster_layers": "",
+    "raster_layers": [
+      "brebes-2020"
+    ],
+    "raster_slider": "",
+    "raster_options": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
   },
   {
     "slide_index": 12,
-    "text": "Social impact",
+    "text": "The construction of toll road in this area led to the construction of other roads too. For example, in Jl. Pemuda, near Brebes, a road was built to connect the toll's exit gate to Jl. Pantura.",
     "inline_image": "",
     "class": "paragraph",
-    "zoom": 10.19,
-    "lng": 109.1264,
-    "lat": -6.8543,
-    "show_tolls": "TRUE",
+    "zoom": 13.9,
+    "lng": 109.07387,
+    "lat": -6.88018,
+    "show_tolls": "FALSE",
     "slider": "FALSE",
     "tolls_filter": [
       "==",
       "nama_ruas",
       "Pejagan - Pemalang"
     ],
-    "other_layers": "",
+    "other_layers": [
+      "rest-areas",
+      "toll-gates"
+    ],
     "other_line_layers": "",
-    "raster_layers": "",
+    "raster_layers": [
+      "brebes-2020"
+    ],
+    "raster_slider": "",
+    "raster_options": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
   },
   {
     "slide_index": 13,
-    "text": "Zoom out",
+    "text": "In this case, the road cut through agricultural land, as seen from Google Earth.",
+    "inline_image": "jl-pemuda.gif",
+    "class": "paragraph",
+    "zoom": 13.9,
+    "lng": 109.07387,
+    "lat": -6.88018,
+    "show_tolls": "FALSE",
+    "slider": "FALSE",
+    "tolls_filter": "",
+    "other_layers": [
+      "rest-areas",
+      "toll-gates"
+    ],
+    "other_line_layers": "",
+    "raster_layers": [
+      "brebes-2020"
+    ],
+    "raster_slider": "",
+    "raster_options": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": ""
+  },
+  {
+    "slide_index": 14,
+    "text": "This area also saw some changes in businesses, for example, new stores were built...",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 13.9,
+    "lng": 109.07387,
+    "lat": -6.88018,
+    "show_tolls": "FALSE",
+    "slider": "FALSE",
+    "tolls_filter": "",
+    "other_layers": "",
+    "other_line_layers": "",
+    "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": ""
+  },
+  {
+    "slide_index": 15,
+    "text": "But while this area grew, some other areas along the Jl Pantura saw a drop in businesses",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 10.19,
+    "lng": 109.1264,
+    "lat": -6.8543,
+    "show_tolls": "FALSE",
+    "slider": "FALSE",
+    "tolls_filter": "",
+    "other_layers": "",
+    "other_line_layers": [
+      "pantura"
+    ],
+    "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": ""
+  },
+  {
+    "slide_index": 16,
+    "text": "For example, xxx saw a drop in ...",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 10.19,
+    "lng": 109.1264,
+    "lat": -6.8543,
+    "show_tolls": "FALSE",
+    "slider": "FALSE",
+    "tolls_filter": "",
+    "other_layers": "",
+    "other_line_layers": [
+      "pantura"
+    ],
+    "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": ""
+  },
+  {
+    "slide_index": 17,
+    "text": "This trend is also seen xxx",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 10.19,
+    "lng": 109.1264,
+    "lat": -6.8543,
+    "show_tolls": "FALSE",
+    "slider": "FALSE",
+    "tolls_filter": "",
+    "other_layers": "",
+    "other_line_layers": [
+      "pantura"
+    ],
+    "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": ""
+  },
+  {
+    "slide_index": 18,
+    "text": "Let's also look at how the toll road construction has impacted another area",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 6.5,
@@ -301,12 +451,14 @@
     "other_layers": "",
     "other_line_layers": "",
     "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
   },
   {
-    "slide_index": 14,
+    "slide_index": 19,
     "text": "Let's zoom in on Pasuruan-Probolinggo",
     "inline_image": "",
     "class": "paragraph",
@@ -323,12 +475,14 @@
     "other_layers": "",
     "other_line_layers": "",
     "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
   },
   {
-    "slide_index": 15,
+    "slide_index": 20,
     "text": "Timelapse of development",
     "inline_image": "",
     "class": "paragraph",
@@ -345,12 +499,14 @@
     "other_layers": "",
     "other_line_layers": "",
     "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
   },
   {
-    "slide_index": 16,
+    "slide_index": 21,
     "text": "Along with it, came the rest area",
     "inline_image": "",
     "class": "paragraph",
@@ -367,12 +523,14 @@
     "other_layers": "",
     "other_line_layers": "",
     "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
   },
   {
-    "slide_index": 17,
+    "slide_index": 22,
     "text": "Environment impact",
     "inline_image": "",
     "class": "paragraph",
@@ -389,12 +547,14 @@
     "other_layers": "",
     "other_line_layers": "",
     "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
   },
   {
-    "slide_index": 18,
+    "slide_index": 23,
     "text": "Social impact",
     "inline_image": "",
     "class": "paragraph",
@@ -411,6 +571,8 @@
     "other_layers": "",
     "other_line_layers": "",
     "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
     "style_layer": "",
     "style_property": "",
     "style": ""
