@@ -265,7 +265,61 @@
   },
   {
     "slide_index": 10,
-    "text": "Along with its development, came the rest area and the toll gates",
+    "text": "Before the toll-road started operating, the main route that drivers would drive through is the Jl Pantura. And after the operation of this toll road, there are reports of businesses along the Jl Pantura that lost earnings and customers.",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 11.26,
+    "lng": 109.0352,
+    "lat": -6.8736,
+    "show_tolls": "FALSE",
+    "slider": "FALSE",
+    "tolls_filter": "",
+    "other_layers": "",
+    "other_line_layers": [
+      "pantura"
+    ],
+    "raster_layers": [
+      "brebes-2020"
+    ],
+    "raster_slider": "",
+    "raster_options": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
+  },
+  {
+    "slide_index": 11,
+    "text": "For example, Detik.com reported that a business owner in Desa Pesantunan lost earnings by 50%.",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 11.26,
+    "lng": 109.0352,
+    "lat": -6.8736,
+    "show_tolls": "FALSE",
+    "slider": "FALSE",
+    "tolls_filter": "",
+    "other_layers": [
+      "desa"
+    ],
+    "other_line_layers": [
+      "pantura"
+    ],
+    "raster_layers": [
+      "brebes-2020"
+    ],
+    "raster_slider": "",
+    "raster_options": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
+  },
+  {
+    "slide_index": 12,
+    "text": "However, the toll roads also caused positive impact on economic growth elsewhere. This is because along with its development, came the rest area and the toll gates",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 11.26,
@@ -295,8 +349,8 @@
     "toll_gates_filters": ""
   },
   {
-    "slide_index": 11,
-    "text": "Particularly, Rest Area KM 260B, also known as Rest Area Heritage, is one of the popular destination stop for drivers.",
+    "slide_index": 13,
+    "text": "Particularly, Rest Area KM 260B, also known as Rest Area Heritage, is one of the popular destination stop for drivers. This building actually used to be a sugar factory that stopped operating, but in 2019 it started operating as a rest area.",
     "inline_image": "rest-area.gif",
     "class": "paragraph",
     "zoom": 11.26,
@@ -325,8 +379,32 @@
     "toll_gates_filters": ""
   },
   {
-    "slide_index": 12,
-    "text": "The construction of toll road in this area led to the construction of other roads too. For example, in Jl. Pemuda, near Brebes, a road was built to connect the toll's exit gate to Jl. Pantura.",
+    "slide_index": 14,
+    "text": "The popularity of this stop is due to its heritage building, and also because the building houses many sellers of food and gifts. In fact, this rest area was built to support businesses in Brebes that lost earnings.",
+    "inline_image": "rest-area-brebes.jpeg",
+    "class": "paragraph",
+    "zoom": 11.26,
+    "lng": 109.0352,
+    "lat": -6.8736,
+    "show_tolls": "FALSE",
+    "slider": "FALSE",
+    "tolls_filter": "",
+    "other_layers": "",
+    "other_line_layers": "",
+    "raster_layers": [
+      "brebes-2020"
+    ],
+    "raster_slider": "",
+    "raster_options": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
+  },
+  {
+    "slide_index": 15,
+    "text": "The construction of toll road in this area led to the construction of other roads too. For example, in Jl. Pemuda, near Brebes, a road was built to connect the toll's East Brebes exit gate to Jl. Pantura.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 11.26,
@@ -359,7 +437,7 @@
     ]
   },
   {
-    "slide_index": 13,
+    "slide_index": 16,
     "text": "In this case, the road cut through agricultural land, as seen from Google Earth.",
     "inline_image": "jl-pemuda.gif",
     "class": "paragraph",
@@ -369,10 +447,10 @@
     "show_tolls": "FALSE",
     "slider": "FALSE",
     "tolls_filter": "",
-    "other_layers": [
-      "toll-gates"
+    "other_layers": "",
+    "other_line_layers": [
+      "brebes-timur"
     ],
-    "other_line_layers": "",
     "raster_layers": [
       "brebes-2020"
     ],
@@ -389,9 +467,9 @@
     ]
   },
   {
-    "slide_index": 14,
-    "text": "This area also saw some changes in businesses, for example, new stores were built...",
-    "inline_image": "",
+    "slide_index": 17,
+    "text": "According to news reports, nearby residents complained that the construction of the toll road and this road that cuts through agricultural land has caused more flooding. In 2017, Brebes area saw a huge flood that residents say is due to toll management that did not fix the sewage system.",
+    "inline_image": "banjir-brebes-2017.jpg",
     "class": "paragraph",
     "zoom": 11.26,
     "lng": 109.0352,
@@ -400,80 +478,12 @@
     "slider": "FALSE",
     "tolls_filter": "",
     "other_layers": "",
-    "other_line_layers": "",
-    "raster_layers": "",
-    "raster_slider": "",
-    "raster_options": "",
-    "style_layer": "",
-    "style_property": "",
-    "style": "",
-    "rest_area_filters": "",
-    "toll_gates_filters": ""
-  },
-  {
-    "slide_index": 15,
-    "text": "But while this area grew, some other areas along the Jl Pantura saw a drop in businesses",
-    "inline_image": "",
-    "class": "paragraph",
-    "zoom": 10.19,
-    "lng": 109.1264,
-    "lat": -6.8543,
-    "show_tolls": "FALSE",
-    "slider": "FALSE",
-    "tolls_filter": "",
-    "other_layers": "",
     "other_line_layers": [
-      "pantura"
+      "brebes-timur"
     ],
-    "raster_layers": "",
-    "raster_slider": "",
-    "raster_options": "",
-    "style_layer": "",
-    "style_property": "",
-    "style": "",
-    "rest_area_filters": "",
-    "toll_gates_filters": ""
-  },
-  {
-    "slide_index": 16,
-    "text": "For example, xxx saw a drop in ...",
-    "inline_image": "",
-    "class": "paragraph",
-    "zoom": 10.19,
-    "lng": 109.1264,
-    "lat": -6.8543,
-    "show_tolls": "FALSE",
-    "slider": "FALSE",
-    "tolls_filter": "",
-    "other_layers": "",
-    "other_line_layers": [
-      "pantura"
+    "raster_layers": [
+      "brebes-2020"
     ],
-    "raster_layers": "",
-    "raster_slider": "",
-    "raster_options": "",
-    "style_layer": "",
-    "style_property": "",
-    "style": "",
-    "rest_area_filters": "",
-    "toll_gates_filters": ""
-  },
-  {
-    "slide_index": 17,
-    "text": "This trend is also seen xxx",
-    "inline_image": "",
-    "class": "paragraph",
-    "zoom": 10.19,
-    "lng": 109.1264,
-    "lat": -6.8543,
-    "show_tolls": "FALSE",
-    "slider": "FALSE",
-    "tolls_filter": "",
-    "other_layers": "",
-    "other_line_layers": [
-      "pantura"
-    ],
-    "raster_layers": "",
     "raster_slider": "",
     "raster_options": "",
     "style_layer": "",
@@ -484,7 +494,33 @@
   },
   {
     "slide_index": 18,
-    "text": "Let's also look at how the toll road construction has impacted another area",
+    "text": "This even caused protests. IMAGE: Detik.com",
+    "inline_image": "demo-banjir.jpeg",
+    "class": "paragraph",
+    "zoom": 11.26,
+    "lng": 109.0352,
+    "lat": -6.8736,
+    "show_tolls": "FALSE",
+    "slider": "FALSE",
+    "tolls_filter": "",
+    "other_layers": "",
+    "other_line_layers": [
+      "brebes-timur"
+    ],
+    "raster_layers": [
+      "brebes-2020"
+    ],
+    "raster_slider": "",
+    "raster_options": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": ""
+  },
+  {
+    "slide_index": 19,
+    "text": "Overall positive impact on the economy. According to a research by Kompas ...",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 6.5,
@@ -505,45 +541,19 @@
     "toll_gates_filters": ""
   },
   {
-    "slide_index": 19,
-    "text": "Let's zoom in on Pasuruan-Probolinggo",
-    "inline_image": "",
-    "class": "paragraph",
-    "zoom": 9.94,
-    "lng": 113.0898,
-    "lat": -7.7213,
-    "show_tolls": "TRUE",
-    "slider": "FALSE",
-    "tolls_filter": [
-      "==",
-      "nama_ruas",
-      "Pasuruan - Probolinggo"
-    ],
-    "other_layers": "",
-    "other_line_layers": "",
-    "raster_layers": "",
-    "raster_slider": "",
-    "raster_options": "",
-    "style_layer": "",
-    "style_property": "",
-    "style": "",
-    "rest_area_filters": "",
-    "toll_gates_filters": ""
-  },
-  {
     "slide_index": 20,
-    "text": "Timelapse of development",
+    "text": "Specifically, the Batang area is seeing growth.",
     "inline_image": "",
     "class": "paragraph",
-    "zoom": 9.94,
-    "lng": 113.0898,
-    "lat": -7.7213,
+    "zoom": 6.5,
+    "lng": 110.5,
+    "lat": -7.6,
     "show_tolls": "TRUE",
     "slider": "FALSE",
     "tolls_filter": [
       "==",
       "nama_ruas",
-      "Pasuruan - Probolinggo"
+      "Batang - Semarang"
     ],
     "other_layers": "",
     "other_line_layers": "",
@@ -558,18 +568,18 @@
   },
   {
     "slide_index": 21,
-    "text": "Along with it, came the rest area",
+    "text": "Timelapse of development (Google earth)",
     "inline_image": "",
     "class": "paragraph",
-    "zoom": 9.94,
-    "lng": 113.0898,
-    "lat": -7.7213,
+    "zoom": 10.1,
+    "lng": 109.9594,
+    "lat": -6.904,
     "show_tolls": "TRUE",
     "slider": "FALSE",
     "tolls_filter": [
       "==",
       "nama_ruas",
-      "Pasuruan - Probolinggo"
+      "Batang - Semarang"
     ],
     "other_layers": "",
     "other_line_layers": "",
@@ -584,18 +594,18 @@
   },
   {
     "slide_index": 22,
-    "text": "Environment impact",
+    "text": "All of this is good news, but Bupati batang hope...",
     "inline_image": "",
     "class": "paragraph",
-    "zoom": 9.94,
-    "lng": 113.0898,
-    "lat": -7.7213,
+    "zoom": 10.1,
+    "lng": 109.9594,
+    "lat": -6.904,
     "show_tolls": "TRUE",
     "slider": "FALSE",
     "tolls_filter": [
       "==",
       "nama_ruas",
-      "Pasuruan - Probolinggo"
+      "Batang - Semarang"
     ],
     "other_layers": "",
     "other_line_layers": "",
@@ -610,18 +620,18 @@
   },
   {
     "slide_index": 23,
-    "text": "Social impact",
+    "text": "Zoom out",
     "inline_image": "",
     "class": "paragraph",
-    "zoom": 9.94,
-    "lng": 113.0898,
-    "lat": -7.7213,
+    "zoom": 10.1,
+    "lng": 109.9594,
+    "lat": -6.904,
     "show_tolls": "TRUE",
     "slider": "FALSE",
     "tolls_filter": [
       "==",
       "nama_ruas",
-      "Pasuruan - Probolinggo"
+      "Batang - Semarang"
     ],
     "other_layers": "",
     "other_line_layers": "",

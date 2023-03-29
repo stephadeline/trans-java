@@ -5,10 +5,14 @@
 
   import tollGates from "./../data/gerbang-tol.json";
 
+  import brebesTimur from "./../data/brebes-timur.json";
+
   import underConstruction from "./../data/konstruksi.json";
 
   import pantura from "./../data/pantura-brebes.json";
   import contentData from "./../data/test-content-2.json";
+
+  import desa from "./../data/desa.json";
 
   import { onMount, onDestroy } from "svelte";
   // import { Map, NavigationControl, Popup, FlyToOptions } from 'maplibre-gl';
@@ -23,8 +27,8 @@
   let mapContainer;
   let slideContent;
 
-  let allLayerId = ["rest-areas", "toll-gates"];
-  let allLinesId = ["construction", "pantura"]
+  let allLayerId = ["rest-areas", "toll-gates", "desa"];
+  let allLinesId = ["construction", "pantura", "brebes-timur"]
   let allRaster = ["brebes-2014", "brebes-2020", "brebes-2020-annotated"]
 
 
@@ -62,6 +66,17 @@
       map.addSource("pantura", {
         type: "geojson",
         data: pantura,
+      });
+
+      map.addSource("desa", {
+        type: "geojson",
+        data: desa,
+      });
+
+
+      map.addSource("brebes-timur", {
+        type: "geojson",
+        data: brebesTimur,
       });
       
 
@@ -148,6 +163,21 @@ map.addLayer({
       });
 
       map.addLayer({
+        id: "desa",
+        type: "circle",
+        source: "desa",
+        paint: {
+          "circle-color": "#ffffff",
+          "circle-opacity": 0,
+          "circle-stroke-color": "#ffffff",
+          "circle-stroke-opacity": 0,
+          "circle-stroke-width": 1,
+          "circle-radius": 3,
+
+        },
+      });
+
+      map.addLayer({
         id: "toll-gates",
         type: "circle",
         source: "toll-gates",
@@ -187,6 +217,21 @@ map.addLayer({
         },
         paint: {
           "line-color": "#FF8200",
+          "line-width": 3,
+          "line-opacity": 0,
+        },
+      });
+
+      map.addLayer({
+        id: "brebes-timur",
+        type: "line",
+        source: "brebes-timur",
+        layout: {
+          "line-join": "round",
+          "line-cap": "round",
+        },
+        paint: {
+          "line-color": "#ffffff",
           "line-width": 3,
           "line-opacity": 0,
         },
