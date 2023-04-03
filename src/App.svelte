@@ -54,6 +54,12 @@
                 roads?
               </p>
               <p class="byline">By Stephanie Adeline</p>
+			
+			{:else if content.class === "about"}
+			<h2 class="about-head">About this project</h2>
+              <p>
+                {@html content.text}
+              </p>
             {:else}
               <p>{@html content.text}</p>
 
@@ -90,13 +96,6 @@
           </div>
         </section>
       {/each}
-      <section class="about">
-        <div>
-          <h2>About the project</h2>
-          <p>This is an explanation about the project</p>
-        </div>
-      </section>
-    </div>
   </Scroller>
 
   <!-- <LoremIpsum/>

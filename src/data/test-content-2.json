@@ -633,5 +633,30 @@
     "labels_shown": "",
     "label_color": "",
     "show_choropleth": ""
+  },
+  {
+    "slide_index": 21,
+    "text": "This is a description of the project",
+    "inline_image": "",
+    "class": "about",
+    "zoom": 6.5,
+    "lng": 110.5,
+    "lat": -6.8,
+    "show_tolls": "TRUE",
+    "slider": "FALSE",
+    "tolls_filter": "",
+    "other_layers": "",
+    "other_line_layers": "",
+    "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": "",
+    "labels_shown": "",
+    "label_color": "",
+    "show_choropleth": ""
   }
 ]
