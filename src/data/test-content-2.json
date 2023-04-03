@@ -19,11 +19,14 @@
     "style_property": "",
     "style": "",
     "rest_area_filters": "",
-    "toll_gates_filters": ""
+    "toll_gates_filters": "",
+    "labels_shown": "",
+    "label_color": "",
+    "show_choropleth": ""
   },
   {
     "slide_index": 1,
-    "text": "Just in the past few years, Indonesia has seen the number of toll-roads increased dramatically. Now in 2023, we have a toll-road connecting almost the entire island of Java.",
+    "text": "In the past few years, Indonesia has seen the number of toll-roads increased significantly. Now in 2023, most of the island of Java is connected by the <strong>Trans-Java toll road</strong>, from Merak to Probolinggo.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 6.5,
@@ -41,11 +44,14 @@
     "style_property": "",
     "style": "",
     "rest_area_filters": "",
-    "toll_gates_filters": ""
+    "toll_gates_filters": "",
+    "labels_shown": "",
+    "label_color": "",
+    "show_choropleth": ""
   },
   {
     "slide_index": 2,
-    "text": "In 2014, the landscape was much different. The main road that drivers travelled through was still the Jl Pantura.",
+    "text": "But if we go back in time to 2014, the landscape was much different. This map shows <strong>850 km</strong> of toll routes that were operating in 2014.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 6.5,
@@ -67,11 +73,14 @@
     "style_property": "",
     "style": "",
     "rest_area_filters": "",
-    "toll_gates_filters": ""
+    "toll_gates_filters": "",
+    "labels_shown": "",
+    "label_color": "",
+    "show_choropleth": ""
   },
   {
     "slide_index": 3,
-    "text": "But since 2014, the island Java is much more connected, with xx km more toll roads in operation. Use the slider below to view when each toll route started operating.",
+    "text": "But since 2014, the island is a lot more connected and accessible for drivers, with now over <strong>1,600 km</strong> toll roads in operation in the island of Java. Use the slider below to view when each toll route started operating.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 6.5,
@@ -102,11 +111,14 @@
       0.5
     ],
     "rest_area_filters": "",
-    "toll_gates_filters": ""
+    "toll_gates_filters": "",
+    "labels_shown": "",
+    "label_color": "",
+    "show_choropleth": ""
   },
   {
     "slide_index": 4,
-    "text": "The increase in toll roads also came with more rest areas for drivers to stop by and grab food or take a break...",
+    "text": "The increase in toll roads also came with more <strong>rest areas</strong><span style=\"circle-rest\"></span> for drivers to stop by, grab food or take a break from their travels.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 6.5,
@@ -126,11 +138,14 @@
     "style_property": "",
     "style": "",
     "rest_area_filters": "",
-    "toll_gates_filters": ""
+    "toll_gates_filters": "",
+    "labels_shown": "",
+    "label_color": "",
+    "show_choropleth": ""
   },
   {
     "slide_index": 5,
-    "text": "As well as the construction of toll-gates, and roads that connect toll roads to other roads.",
+    "text": "In addition, toll roads came with the construction of toll-gates <span class=\"circle-gates\"></span>, and also other roads that connect toll roads to with local streets.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 6.5,
@@ -151,11 +166,14 @@
     "style_property": "",
     "style": "",
     "rest_area_filters": "",
-    "toll_gates_filters": ""
+    "toll_gates_filters": "",
+    "labels_shown": "",
+    "label_color": "",
+    "show_choropleth": ""
   },
   {
     "slide_index": 6,
-    "text": "In addition, more toll-roads are planned to be built.",
+    "text": "That's not all though. We can expect to see more toll-roads <span class=\"dashed-line\"></span> operating in the next 2 years. By 2024, the Trans-Java toll road will connect the entire island from West to East, from Merak to Banyuwangi.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 6.5,
@@ -178,36 +196,14 @@
     "style_property": "",
     "style": "",
     "rest_area_filters": "",
-    "toll_gates_filters": ""
+    "toll_gates_filters": "",
+    "labels_shown": "",
+    "label_color": "",
+    "show_choropleth": ""
   },
   {
     "slide_index": 7,
-    "text": "The construction of toll roads have had several impacts xxx",
-    "inline_image": "",
-    "class": "paragraph",
-    "zoom": 6.5,
-    "lng": 110.5,
-    "lat": -7.6,
-    "show_tolls": "TRUE",
-    "slider": "FALSE",
-    "tolls_filter": "",
-    "other_layers": [
-      "rest-areas",
-      "toll-gates"
-    ],
-    "other_line_layers": "",
-    "raster_layers": "",
-    "raster_slider": "",
-    "raster_options": "",
-    "style_layer": "",
-    "style_property": "",
-    "style": "",
-    "rest_area_filters": "",
-    "toll_gates_filters": ""
-  },
-  {
-    "slide_index": 8,
-    "text": "The Pejagan-Pemalang route was recently completed in 2016. Some context.",
+    "text": "The speedy development of toll roads has made trips better for travelers, and it has alleviated congestion especially during Lebaran holidays, where many Indonesians travel outside of Jakarta to their hometowns.  Let's zoom in to one route, Pejagan-Pemalang, completed in 2016, to examine the impact of toll-road construction.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 10.19,
@@ -229,10 +225,13 @@
     "style_property": "",
     "style": "",
     "rest_area_filters": "",
-    "toll_gates_filters": ""
+    "toll_gates_filters": "",
+    "labels_shown": "",
+    "label_color": "",
+    "show_choropleth": ""
   },
   {
-    "slide_index": 9,
+    "slide_index": 8,
     "text": "Click to see how the area developed, as seen from Landsat 8.",
     "inline_image": "",
     "class": "paragraph",
@@ -261,37 +260,14 @@
     "style_property": "",
     "style": "",
     "rest_area_filters": "",
-    "toll_gates_filters": ""
+    "toll_gates_filters": "",
+    "labels_shown": "",
+    "label_color": "",
+    "show_choropleth": ""
   },
   {
-    "slide_index": 10,
-    "text": "Before the toll-road started operating, the main route that drivers would drive through is the Jl Pantura. And after the operation of this toll road, there are reports of businesses along the Jl Pantura that lost earnings and customers.",
-    "inline_image": "",
-    "class": "paragraph",
-    "zoom": 11.26,
-    "lng": 109.0352,
-    "lat": -6.8736,
-    "show_tolls": "FALSE",
-    "slider": "FALSE",
-    "tolls_filter": "",
-    "other_layers": "",
-    "other_line_layers": [
-      "pantura"
-    ],
-    "raster_layers": [
-      "brebes-2020"
-    ],
-    "raster_slider": "",
-    "raster_options": "",
-    "style_layer": "",
-    "style_property": "",
-    "style": "",
-    "rest_area_filters": "",
-    "toll_gates_filters": ""
-  },
-  {
-    "slide_index": 11,
-    "text": "For example, Detik.com reported that a business owner in Desa Pesantunan lost earnings by 50%.",
+    "slide_index": 9,
+    "text": "Before the toll-road started operating, the main route that drivers would drive through is Jl Pantura. And after the operation of this toll road, there are reports of businesses along the Jl Pantura that lost earnings and customers. For example, Detik.com reported that a business owner in Desa Pesantunan lost half of their earnings after the toll road started operating, because drivers no longer stop by their business.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 11.26,
@@ -315,10 +291,16 @@
     "style_property": "",
     "style": "",
     "rest_area_filters": "",
-    "toll_gates_filters": ""
+    "toll_gates_filters": "",
+    "labels_shown": [
+      "pantura",
+      "pesantunan"
+    ],
+    "label_color": "",
+    "show_choropleth": ""
   },
   {
-    "slide_index": 12,
+    "slide_index": 10,
     "text": "However, the toll roads also caused positive impact on economic growth elsewhere. This is because along with its development, came the rest area and the toll gates",
     "inline_image": "",
     "class": "paragraph",
@@ -346,10 +328,13 @@
     "style_property": "",
     "style": "",
     "rest_area_filters": "",
-    "toll_gates_filters": ""
+    "toll_gates_filters": "",
+    "labels_shown": "",
+    "label_color": "",
+    "show_choropleth": ""
   },
   {
-    "slide_index": 13,
+    "slide_index": 11,
     "text": "Particularly, Rest Area KM 260B, also known as Rest Area Heritage, is one of the popular destination stop for drivers. This building actually used to be a sugar factory that stopped operating, but in 2019 it started operating as a rest area.",
     "inline_image": "rest-area.gif",
     "class": "paragraph",
@@ -376,11 +361,16 @@
       "keterangan",
       "Rest area heritage"
     ],
-    "toll_gates_filters": ""
+    "toll_gates_filters": "",
+    "labels_shown": [
+      "heritage-rest-area"
+    ],
+    "label_color": "",
+    "show_choropleth": ""
   },
   {
-    "slide_index": 14,
-    "text": "The popularity of this stop is due to its heritage building, and also because the building houses many sellers of food and gifts. In fact, this rest area was built to support businesses in Brebes that lost earnings.",
+    "slide_index": 12,
+    "text": "The popularity of this stop is not only due to its unique history, but also because the building houses many sellers of food and souvenirs. In fact, this rest area was built to support businesses in Brebes that lost earnings.",
     "inline_image": "rest-area-brebes.jpeg",
     "class": "paragraph",
     "zoom": 11.26,
@@ -400,16 +390,21 @@
     "style_property": "",
     "style": "",
     "rest_area_filters": "",
-    "toll_gates_filters": ""
+    "toll_gates_filters": "",
+    "labels_shown": [
+      "heritage-rest-area"
+    ],
+    "label_color": "",
+    "show_choropleth": ""
   },
   {
-    "slide_index": 15,
-    "text": "The construction of toll road in this area led to the construction of other roads too. For example, in Jl. Pemuda, near Brebes, a road was built to connect the toll's East Brebes exit gate to Jl. Pantura.",
-    "inline_image": "",
+    "slide_index": 13,
+    "text": "The construction of toll road in this area led to the construction of other roads too. For example, in Jl. Pemuda, near Brebes, a road was built to connect the toll's East Brebes exit gate to Jl. Pantura. In this case, the road cut through agricultural land, as seen from Google Earth.",
+    "inline_image": "jl-pemuda.gif",
     "class": "paragraph",
-    "zoom": 11.26,
-    "lng": 109.0352,
-    "lat": -6.8736,
+    "zoom": 13.33,
+    "lng": 109.07495,
+    "lat": -6.88444,
     "show_tolls": "FALSE",
     "slider": "FALSE",
     "tolls_filter": [
@@ -420,40 +415,10 @@
     "other_layers": [
       "toll-gates"
     ],
-    "other_line_layers": "",
-    "raster_layers": [
-      "brebes-2020"
-    ],
-    "raster_slider": "",
-    "raster_options": "",
-    "style_layer": "",
-    "style_property": "",
-    "style": "",
-    "rest_area_filters": "",
-    "toll_gates_filters": [
-      "==",
-      "keterangan",
-      "GT BREBES TIMUR"
-    ]
-  },
-  {
-    "slide_index": 16,
-    "text": "In this case, the road cut through agricultural land, as seen from Google Earth.",
-    "inline_image": "jl-pemuda.gif",
-    "class": "paragraph",
-    "zoom": 11.26,
-    "lng": 109.0352,
-    "lat": -6.8736,
-    "show_tolls": "FALSE",
-    "slider": "FALSE",
-    "tolls_filter": "",
-    "other_layers": "",
     "other_line_layers": [
       "brebes-timur"
     ],
-    "raster_layers": [
-      "brebes-2020"
-    ],
+    "raster_layers": "",
     "raster_slider": "",
     "raster_options": "",
     "style_layer": "",
@@ -464,16 +429,22 @@
       "==",
       "keterangan",
       "GT BREBES TIMUR"
-    ]
+    ],
+    "labels_shown": [
+      "pemuda",
+      "gerbang-brebes-timur"
+    ],
+    "label_color": "black",
+    "show_choropleth": ""
   },
   {
-    "slide_index": 17,
+    "slide_index": 14,
     "text": "According to news reports, nearby residents complained that the construction of the toll road and this road that cuts through agricultural land has caused more flooding. In 2017, Brebes area saw a huge flood that residents say is due to toll management that did not fix the sewage system.",
     "inline_image": "banjir-brebes-2017.jpg",
     "class": "paragraph",
-    "zoom": 11.26,
-    "lng": 109.0352,
-    "lat": -6.8736,
+    "zoom": 13.33,
+    "lng": 109.07495,
+    "lat": -6.88444,
     "show_tolls": "FALSE",
     "slider": "FALSE",
     "tolls_filter": "",
@@ -481,51 +452,171 @@
     "other_line_layers": [
       "brebes-timur"
     ],
-    "raster_layers": [
-      "brebes-2020"
-    ],
+    "raster_layers": "",
     "raster_slider": "",
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
     "style": "",
     "rest_area_filters": "",
-    "toll_gates_filters": ""
+    "toll_gates_filters": "",
+    "labels_shown": "",
+    "label_color": "",
+    "show_choropleth": ""
+  },
+  {
+    "slide_index": 15,
+    "text": "This even prompted residents to protest in the middle of the toll road, which caused disruption and closure of the route on February 2017.",
+    "inline_image": "demo-banjir.jpeg",
+    "class": "paragraph",
+    "zoom": 13.33,
+    "lng": 109.07495,
+    "lat": -6.88444,
+    "show_tolls": "FALSE",
+    "slider": "FALSE",
+    "tolls_filter": "",
+    "other_layers": "",
+    "other_line_layers": [
+      "brebes-timur"
+    ],
+    "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": "",
+    "labels_shown": "",
+    "label_color": "",
+    "show_choropleth": ""
+  },
+  {
+    "slide_index": 16,
+    "text": "However, the toll road is still praised for having an overall positive impact on the economy. According to a research by Kompas, between 2016-2026, it is estimated that the development of the Trans Java toll road will bring an additional income of IDR 50.69 trillion to the six provinces in Java, with Central Java and East Java seeing the biggest increase in income.",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 6.5,
+    "lng": 110.5,
+    "lat": -7.6,
+    "show_tolls": "TRUE",
+    "slider": "FALSE",
+    "tolls_filter": "",
+    "other_layers": [
+      "construction"
+    ],
+    "other_line_layers": "",
+    "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": "",
+    "labels_shown": "",
+    "label_color": "",
+    "show_choropleth": "TRUE"
+  },
+  {
+    "slide_index": 17,
+    "text": "For example, to strengthen Indonesia's industrial sector, the government is developing a 4,000-ha integrated industrial area in Batang, with more than half of the area to be completed by 2024. This area has direct access to the Batang-Semarang route of the Trans-Java toll road.",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 6.5,
+    "lng": 110.5,
+    "lat": -7.6,
+    "show_tolls": "TRUE",
+    "slider": "FALSE",
+    "tolls_filter": [
+      "==",
+      "nama_ruas",
+      "Batang - Semarang"
+    ],
+    "other_layers": "",
+    "other_line_layers": [
+      "industri-batang"
+    ],
+    "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": "",
+    "labels_shown": "",
+    "label_color": "",
+    "show_choropleth": ""
   },
   {
     "slide_index": 18,
-    "text": "This even caused protests. IMAGE: Detik.com",
-    "inline_image": "demo-banjir.jpeg",
+    "text": "From satellite imagery, we can already see the development of the area in the last few years.",
+    "inline_image": "kib.gif",
     "class": "paragraph",
-    "zoom": 11.26,
-    "lng": 109.0352,
-    "lat": -6.8736,
-    "show_tolls": "FALSE",
+    "zoom": 10.1,
+    "lng": 109.9594,
+    "lat": -6.904,
+    "show_tolls": "TRUE",
     "slider": "FALSE",
-    "tolls_filter": "",
+    "tolls_filter": [
+      "==",
+      "nama_ruas",
+      "Batang - Semarang"
+    ],
     "other_layers": "",
     "other_line_layers": [
-      "brebes-timur"
+      "industri-batang"
     ],
-    "raster_layers": [
-      "brebes-2020"
-    ],
+    "raster_layers": "",
     "raster_slider": "",
     "raster_options": "",
     "style_layer": "",
     "style_property": "",
     "style": "",
     "rest_area_filters": "",
-    "toll_gates_filters": ""
+    "toll_gates_filters": "",
+    "labels_shown": "",
+    "label_color": "",
+    "show_choropleth": ""
   },
   {
     "slide_index": 19,
-    "text": "Overall positive impact on the economy. According to a research by Kompas ...",
+    "text": "All of this is good news for job creation, but the development of the area so far has also had some negative impacts including floods in the area.",
+    "inline_image": "",
+    "class": "paragraph",
+    "zoom": 10.1,
+    "lng": 109.9594,
+    "lat": -6.904,
+    "show_tolls": "TRUE",
+    "slider": "FALSE",
+    "tolls_filter": [
+      "==",
+      "nama_ruas",
+      "Batang - Semarang"
+    ],
+    "other_layers": "",
+    "other_line_layers": "",
+    "raster_layers": "",
+    "raster_slider": "",
+    "raster_options": "",
+    "style_layer": "",
+    "style_property": "",
+    "style": "",
+    "rest_area_filters": "",
+    "toll_gates_filters": "",
+    "labels_shown": "",
+    "label_color": "",
+    "show_choropleth": ""
+  },
+  {
+    "slide_index": 20,
+    "text": "Zoom out",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 6.5,
     "lng": 110.5,
-    "lat": -7.6,
+    "lat": -6.8,
     "show_tolls": "TRUE",
     "slider": "FALSE",
     "tolls_filter": "",
@@ -538,110 +629,9 @@
     "style_property": "",
     "style": "",
     "rest_area_filters": "",
-    "toll_gates_filters": ""
-  },
-  {
-    "slide_index": 20,
-    "text": "Specifically, the Batang area is seeing growth.",
-    "inline_image": "",
-    "class": "paragraph",
-    "zoom": 6.5,
-    "lng": 110.5,
-    "lat": -7.6,
-    "show_tolls": "TRUE",
-    "slider": "FALSE",
-    "tolls_filter": [
-      "==",
-      "nama_ruas",
-      "Batang - Semarang"
-    ],
-    "other_layers": "",
-    "other_line_layers": "",
-    "raster_layers": "",
-    "raster_slider": "",
-    "raster_options": "",
-    "style_layer": "",
-    "style_property": "",
-    "style": "",
-    "rest_area_filters": "",
-    "toll_gates_filters": ""
-  },
-  {
-    "slide_index": 21,
-    "text": "Timelapse of development (Google earth)",
-    "inline_image": "",
-    "class": "paragraph",
-    "zoom": 10.1,
-    "lng": 109.9594,
-    "lat": -6.904,
-    "show_tolls": "TRUE",
-    "slider": "FALSE",
-    "tolls_filter": [
-      "==",
-      "nama_ruas",
-      "Batang - Semarang"
-    ],
-    "other_layers": "",
-    "other_line_layers": "",
-    "raster_layers": "",
-    "raster_slider": "",
-    "raster_options": "",
-    "style_layer": "",
-    "style_property": "",
-    "style": "",
-    "rest_area_filters": "",
-    "toll_gates_filters": ""
-  },
-  {
-    "slide_index": 22,
-    "text": "All of this is good news, but Bupati batang hope...",
-    "inline_image": "",
-    "class": "paragraph",
-    "zoom": 10.1,
-    "lng": 109.9594,
-    "lat": -6.904,
-    "show_tolls": "TRUE",
-    "slider": "FALSE",
-    "tolls_filter": [
-      "==",
-      "nama_ruas",
-      "Batang - Semarang"
-    ],
-    "other_layers": "",
-    "other_line_layers": "",
-    "raster_layers": "",
-    "raster_slider": "",
-    "raster_options": "",
-    "style_layer": "",
-    "style_property": "",
-    "style": "",
-    "rest_area_filters": "",
-    "toll_gates_filters": ""
-  },
-  {
-    "slide_index": 23,
-    "text": "Zoom out",
-    "inline_image": "",
-    "class": "paragraph",
-    "zoom": 10.1,
-    "lng": 109.9594,
-    "lat": -6.904,
-    "show_tolls": "TRUE",
-    "slider": "FALSE",
-    "tolls_filter": [
-      "==",
-      "nama_ruas",
-      "Batang - Semarang"
-    ],
-    "other_layers": "",
-    "other_line_layers": "",
-    "raster_layers": "",
-    "raster_slider": "",
-    "raster_options": "",
-    "style_layer": "",
-    "style_property": "",
-    "style": "",
-    "rest_area_filters": "",
-    "toll_gates_filters": ""
+    "toll_gates_filters": "",
+    "labels_shown": "",
+    "label_color": "",
+    "show_choropleth": ""
   }
 ]

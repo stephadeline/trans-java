@@ -1,6 +1,11 @@
 <script>
   import allTollRoadData from "./../data/java-toll-data.json";
 
+  import provinsi from "./../data/provinsi.json";
+
+  import labelData from "./../data/labels.json";
+  import industriBatang from "./../data/kawasan-industri-batang.json";
+
   import restArea from "./../data/rest-area.json";
 
   import tollGates from "./../data/gerbang-tol.json";
@@ -28,9 +33,10 @@
   let slideContent;
 
   let allLayerId = ["rest-areas", "toll-gates", "desa"];
-  let allLinesId = ["construction", "pantura", "brebes-timur"]
-  let allRaster = ["brebes-2014", "brebes-2020", "brebes-2020-annotated"]
+  let allLinesId = ["construction", "pantura", "brebes-timur", "industri-batang"];
+  let allRaster = ["brebes-2014", "brebes-2020", "brebes-2020-annotated"];
 
+  let labelDivCollection =[]
 
   onMount(() => {
     const initialState = { lng: 110.5, lat: -6.8, zoom: 6.5 };
@@ -73,66 +79,79 @@
         data: desa,
       });
 
-
       map.addSource("brebes-timur", {
         type: "geojson",
         data: brebesTimur,
       });
-      
+
+      map.addSource("industri-batang", {
+        type: "geojson",
+        data: industriBatang,
+      });
+
+      map.addSource("provinsi", {
+        type: "geojson",
+        data: provinsi,
+      });
 
       map.addSource("brebes-2014", {
-        "type": "image",
-        "url": "assets/brebes2014.jpg",
-        "coordinates": [
-          [ 108.296246230602279, -6.626304532490591 ],[ 109.394879043102264, -6.626304532490591 ], [ 109.394879043102264, -7.096013863041794 ], [ 108.296246230602279, -7.096013863041794 ],
-        ]
-    });
+        type: "image",
+        url: "assets/brebes2014.jpg",
+        coordinates: [
+          [108.296246230602279, -6.626304532490591],
+          [109.394879043102264, -6.626304532490591],
+          [109.394879043102264, -7.096013863041794],
+          [108.296246230602279, -7.096013863041794],
+        ],
+      });
 
-    map.addSource("brebes-2020", {
-        "type": "image",
-        "url": "assets/brebes-2020.jpg",
-        "coordinates": [
-           [ 108.3480128645897, -6.6200220929638665 ],
-           [ 109.4466456770897, -6.6200220929638665 ],
-          [ 109.4466456770897, -7.128575515704274 ], [ 108.3480128645897, -7.128575515704274 ],
-        ]
-    });
-    map.addSource("brebes-2020-annotated", {
-        "type": "image",
-        "url": "assets/brebes-2020-annotated.jpg",
-        "coordinates": [
-           [ 108.3480128645897, -6.6200220929638665 ],
-           [ 109.4466456770897, -6.6200220929638665 ],
-          [ 109.4466456770897, -7.128575515704274 ], [ 108.3480128645897, -7.128575515704274 ],
-        ]
-    });
+      map.addSource("brebes-2020", {
+        type: "image",
+        url: "assets/brebes-2020.jpg",
+        coordinates: [
+          [108.3480128645897, -6.6200220929638665],
+          [109.4466456770897, -6.6200220929638665],
+          [109.4466456770897, -7.128575515704274],
+          [108.3480128645897, -7.128575515704274],
+        ],
+      });
+      map.addSource("brebes-2020-annotated", {
+        type: "image",
+        url: "assets/brebes-2020-annotated.jpg",
+        coordinates: [
+          [108.3480128645897, -6.6200220929638665],
+          [109.4466456770897, -6.6200220929638665],
+          [109.4466456770897, -7.128575515704274],
+          [108.3480128645897, -7.128575515704274],
+        ],
+      });
 
-    map.addLayer({
-    "id": "brebes-2014",
-    "source": "brebes-2014",
-    "type": "raster",
-    "paint": {
-        "raster-opacity": 0
-    }
-});
+      map.addLayer({
+        id: "brebes-2014",
+        source: "brebes-2014",
+        type: "raster",
+        paint: {
+          "raster-opacity": 0,
+        },
+      });
 
-map.addLayer({
-    "id": "brebes-2020",
-    "source": "brebes-2020",
-    "type": "raster",
-    "paint": {
-        "raster-opacity": 0
-    }
-});
+      map.addLayer({
+        id: "brebes-2020",
+        source: "brebes-2020",
+        type: "raster",
+        paint: {
+          "raster-opacity": 0,
+        },
+      });
 
-map.addLayer({
-    "id": "brebes-2020-annotated",
-    "source": "brebes-2020-annotated",
-    "type": "raster",
-    "paint": {
-        "raster-opacity": 0
-    }
-});
+      map.addLayer({
+        id: "brebes-2020-annotated",
+        source: "brebes-2020-annotated",
+        type: "raster",
+        paint: {
+          "raster-opacity": 0,
+        },
+      });
 
       map.addLayer({
         id: "all_toll_roads",
@@ -148,6 +167,16 @@ map.addLayer({
         },
       });
       map.addLayer({
+        id: "industri-batang",
+        type: "line",
+        source: "industri-batang",
+        paint: {
+          "line-color": "#333333",
+          "line-width": 1,
+          "line-opacity" : 0,
+        },
+      });
+      map.addLayer({
         id: "rest-areas",
         type: "circle",
         source: "rest-areas",
@@ -157,23 +186,7 @@ map.addLayer({
           "circle-stroke-color": "#06BCC1",
           "circle-stroke-opacity": 0,
           "circle-stroke-width": 1,
-          "circle-radius": 3,
-
-        },
-      });
-
-      map.addLayer({
-        id: "desa",
-        type: "circle",
-        source: "desa",
-        paint: {
-          "circle-color": "#ffffff",
-          "circle-opacity": 0,
-          "circle-stroke-color": "#ffffff",
-          "circle-stroke-opacity": 0,
-          "circle-stroke-width": 1,
-          "circle-radius": 3,
-
+          "circle-radius": 5,
         },
       });
 
@@ -187,9 +200,27 @@ map.addLayer({
           "circle-stroke-color": "#ef4123",
           "circle-stroke-opacity": 0,
           "circle-stroke-width": 1,
-          "circle-radius": 3,
-          
+          "circle-radius": 5,
         },
+      });
+
+      map.addLayer({
+        id: "provinsi",
+        type: "fill",
+        source: "provinsi",
+        'paint': {
+        'fill-color': [
+          'interpolate',
+          ['linear'],
+          ['get', 'income'],
+          0,
+          '#A3DAB7',
+          
+          35,
+          '#25429A'
+        ],
+        'fill-opacity': 0,
+    }
       });
 
       map.addLayer({
@@ -231,11 +262,50 @@ map.addLayer({
           "line-cap": "round",
         },
         paint: {
-          "line-color": "#ffffff",
+          "line-color": "#ef4123",
           "line-width": 3,
           "line-opacity": 0,
         },
       });
+
+      map.addLayer({
+        id: "desa",
+        type: "circle",
+        source: "desa",
+        paint: {
+          "circle-color": "#ffffff",
+          "circle-opacity": 0,
+          "circle-stroke-color": "#ffffff",
+          "circle-stroke-opacity": 0,
+          "circle-stroke-width": 1,
+          "circle-radius": 5,
+        },
+      });
+
+      labelData.forEach(label => {
+        let labelDiv = document.createElement("div");
+          labelDiv.innerHTML += "<span class='text-label' style='line-height: 15px; font-size: 15px; font-weight: bold; padding:5px'>" + label.text + "</span>";
+          labelDiv.id = label.id;
+          labelDiv.style.opacity = 0;
+          labelDiv.style.color = "#ffffff";
+
+          labelDivCollection.push(labelDiv);
+
+          var marker = new maplibregl.Marker(labelDiv)
+            .setLngLat([label.lng, label.lat])
+            .addTo(map);
+      })
+      console.log(labelDivCollection)
+
+      // const labelDiv = document.createElement("div");
+      //     labelDiv.innerHTML += "<span>Gerbang Tol Brebes Timur</span>";
+
+      //     console.log(labelDiv)
+
+      // var marker = new maplibregl.Marker(labelDiv)
+      //       .setLngLat([109.0075963180483, -6.882611574480206])
+      //       .addTo(map);
+
     });
   });
   onDestroy(() => {
@@ -257,14 +327,13 @@ map.addLayer({
     }
 
     if (slideContent.show_tolls === "FALSE") {
-      map.setPaintProperty("all_toll_roads", "line-opacity", 0)
+      map.setPaintProperty("all_toll_roads", "line-opacity", 0);
     } else {
-      map.setPaintProperty("all_toll_roads", "line-opacity", 1)
+      map.setPaintProperty("all_toll_roads", "line-opacity", 1);
     }
 
     if (slideContent.other_layers.length > 0) {
-
-      let hasRaster = slideContent.raster_layers.length > 0
+      let hasRaster = slideContent.raster_layers.length > 0;
       allLayerId.forEach((layer) => {
         if (slideContent.other_layers.includes(layer)) {
           if (slideContent.raster_layers.length > 0) {
@@ -273,22 +342,20 @@ map.addLayer({
 
             map.setPaintProperty(layer, "circle-radius", 20);
           } else {
-          map.setPaintProperty(layer, "circle-opacity", 1);
-          map.setPaintProperty(layer, "circle-stroke-opacity", 0);
-          map.setPaintProperty(layer, "circle-radius", 3);
-          
+            map.setPaintProperty(layer, "circle-opacity", 1);
+            map.setPaintProperty(layer, "circle-stroke-opacity", 0);
+            map.setPaintProperty(layer, "circle-radius", 5);
           }
         } else {
           map.setPaintProperty(layer, "circle-opacity", 0);
           map.setPaintProperty(layer, "circle-stroke-opacity", 0);
-
         }
       });
     } else {
       // remove all layers
       allLayerId.forEach((layer) => {
         map.setPaintProperty(layer, "circle-opacity", 0);
-          map.setPaintProperty(layer, "circle-stroke-opacity", 0);
+        map.setPaintProperty(layer, "circle-stroke-opacity", 0);
       });
     }
 
@@ -339,14 +406,12 @@ map.addLayer({
       // ]);
     } else {
       map.setFilter("rest-areas", ["has", "lat"]);
-
     }
 
     if (slideContent.toll_gates_filters) {
       map.setFilter("toll-gates", slideContent.toll_gates_filters);
     } else {
       map.setFilter("toll-gates", ["has", "koord_x"]);
-
     }
 
     if (selectedYear) {
@@ -355,28 +420,57 @@ map.addLayer({
       }
     }
 
-      if (slideContent.raster_slider === "TRUE" && rasterYear) {
+    if (slideContent.raster_slider === "TRUE" && rasterYear) {
+      let yearBefore = slideContent.raster_options[0];
+      let yearAfter = slideContent.raster_options[1];
+      let layerBefore = slideContent.raster_layers[0];
+      let layerAfter = slideContent.raster_layers[1];
 
-        let yearBefore = slideContent.raster_options[0]
-        let yearAfter = slideContent.raster_options[1]
-        let layerBefore = slideContent.raster_layers[0]
-        let layerAfter = slideContent.raster_layers[1]
-
-        switch (rasterYear) {
-          case yearBefore:
+      switch (rasterYear) {
+        case yearBefore:
           map.setPaintProperty(layerBefore, "raster-opacity", 1);
           map.setPaintProperty(layerAfter, "raster-opacity", 0);
           break;
-          case yearAfter:
+        case yearAfter:
           map.setPaintProperty(layerAfter, "raster-opacity", 1);
           map.setPaintProperty(layerBefore, "raster-opacity", 1);
           break;
-          default:
+        default:
           map.setPaintProperty(layerAfter, "raster-opacity", 1);
           map.setPaintProperty(layerBefore, "raster-opacity", 1);
-        }
       }
-    
+    }
+    if (slideContent.labels_shown) {
+      labelDivCollection.forEach(div => {
+        if (slideContent.labels_shown.includes(div.id)) {
+          div.style.opacity = 1;
+          if (slideContent.label_color) {
+            div.style.color = slideContent.label_color;
+            div.style.backgroundColor = "#ffffff"
+          } else {
+            div.style.color = "#ffffff";
+            div.style.backgroundColor = "black"
+          }
+        } else {
+          div.style.opacity = 0;
+        }
+      })
+    } else {
+      labelDivCollection.forEach(div => {
+       
+          div.style.opacity = 0;
+        
+      })
+    }
+
+    if (slideContent.show_choropleth === "TRUE") {
+      map.setPaintProperty("provinsi", "fill-opacity", 0.95);
+
+
+    } else {
+      map.setPaintProperty("provinsi", "fill-opacity", 0);
+
+    }
   }
 </script>
 
@@ -395,4 +489,5 @@ map.addLayer({
     width: 100%;
     height: 100%;
   }
+  
 </style>
