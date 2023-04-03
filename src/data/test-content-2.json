@@ -118,7 +118,7 @@
   },
   {
     "slide_index": 4,
-    "text": "The increase in toll roads also came with more <strong>rest areas</strong><span style=\"circle-rest\"></span> for drivers to stop by, grab food or take a break from their travels.",
+    "text": "The increase in toll roads also came with more <strong>rest areas</strong> <span style=\"height: 10px; width: 10px; background-color: #06BCC1; border-radius: 50%; display: inline-block;\"></span> for drivers to stop by, grab food or take a break from their travels.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 6.5,
@@ -145,7 +145,7 @@
   },
   {
     "slide_index": 5,
-    "text": "In addition, toll roads came with the construction of toll-gates <span class=\"circle-gates\"></span>, and also other roads that connect toll roads to with local streets.",
+    "text": "In addition, toll roads came with the construction of toll-gates <span class=\"circle-gates\" style=\"height: 10px; width: 10px; background-color: #ef4123; border-radius: 50%; display: inline-block;\"></span>, and also other roads that connect toll roads to with local streets.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 6.5,
@@ -173,7 +173,7 @@
   },
   {
     "slide_index": 6,
-    "text": "That's not all though. We can expect to see more toll-roads <span class=\"dashed-line\"></span> operating in the next 2 years. By 2024, the Trans-Java toll road will connect the entire island from West to East, from Merak to Banyuwangi.",
+    "text": "That's not all though. We can expect to see more toll-roads <svg height=\"10\" width=\"25\"><line x1=\"2\" y1=\"5\" x2=\"25\" y2=\"5\" stroke=\"#FF8200\" stroke-dasharray=\"4\" stroke-width=\"2.5\"></line></svg> operating in the next 2 years. By 2024, the Trans-Java toll road will connect the entire island from West to East, from Merak to Banyuwangi.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 6.5,
@@ -267,7 +267,7 @@
   },
   {
     "slide_index": 9,
-    "text": "Before the toll-road started operating, the main route that drivers would drive through is Jl Pantura. And after the operation of this toll road, there are reports of businesses along the Jl Pantura that lost earnings and customers. For example, Detik.com reported that a business owner in Desa Pesantunan lost half of their earnings after the toll road started operating, because drivers no longer stop by their business.",
+    "text": "Before the toll-road started operating, the main route that drivers would drive through is <strong>Jl Pantura</strong>. And after the operation of this toll road, there are reports of businesses along the Jl Pantura that lost earnings and customers. For example, Detik.com reported that a business owner in Desa Pesantunan lost half of their earnings after the toll road started operating, because drivers no longer stop by their business.",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 11.26,
@@ -301,7 +301,7 @@
   },
   {
     "slide_index": 10,
-    "text": "However, the toll roads also caused positive impact on economic growth elsewhere. This is because along with its development, came the rest area and the toll gates",
+    "text": "However, the toll roads also caused positive impact on <strong>economic growth</strong> elsewhere. This is because along with its development, came the rest area and the toll gates",
     "inline_image": "",
     "class": "paragraph",
     "zoom": 11.26,
@@ -335,7 +335,7 @@
   },
   {
     "slide_index": 11,
-    "text": "Particularly, Rest Area KM 260B, also known as Rest Area Heritage, is one of the popular destination stop for drivers. This building actually used to be a sugar factory that stopped operating, but in 2019 it started operating as a rest area.",
+    "text": "Particularly, Rest Area KM 260B, also known as <strong>Rest Area Heritage</strong>, is one of the popular destination stop for drivers. This building actually used to be a sugar factory that stopped operating, but in 2019 it started operating as a rest area.",
     "inline_image": "rest-area.gif",
     "class": "paragraph",
     "zoom": 11.26,

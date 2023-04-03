@@ -198,4 +198,12 @@
     margin: auto;
     max-width: 700px;
   }
+
+  span.circle-gates {
+	height: 15px;
+  width: 15px;
+  background-color: #ef4123;
+  border-radius: 50%;
+  display: inline-block;
+  }
 </style>
