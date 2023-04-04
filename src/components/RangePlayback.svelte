@@ -33,12 +33,15 @@
 	input {
 		width: 250px;
 		margin: 0;
+		pointer-events: all;
 	}
 	button {
 		padding: 0;
 		margin: 0;
 		font-size: 30px;
 		line-height: 0;
+		pointer-events: all;
+
 	}
 
 	img {

@@ -30,7 +30,7 @@
     str.toLowerCase().replace(/ /g, "-").replace(/\./g, "");
 
 </script>
-
+<div class="switch">
 {#if design == 'inner'}
 <div class="s s--inner">
     <span id={`switch-${uniqueID}`}>{label}</span>
@@ -71,6 +71,7 @@
 </div>
 
 {/if}
+</div>
 
 <style>
 			:root {
@@ -262,5 +263,9 @@
         border-radius: 1.5em;
     }
    
+    .switch {
+        pointer-events: all;
+
+    }
 
 </style>

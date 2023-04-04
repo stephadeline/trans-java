@@ -13,7 +13,7 @@
   let offset;
   let progress;
   let top = 0;
-  let threshold = 0.5;
+  let threshold = 0.9;
   let bottom = 0;
   let selectedYear = 2014;
 
@@ -46,17 +46,15 @@
       {#each contentData as content}
         <section class={content.class}>
           <div class="scroll-content">
+            {#if content.text}
             {#if content.class === "headline"}
-              <h1 class="headline">{content.text}</h1>
+              <h1 class="headline">The Trans-Java Toll Road <img style="width: 30px; display: inline" src="/assets/jalan-tol.svg"/></h1>
               <p class="deck">
-                Since 2014, Indonesia has managed to build 1,900 km of new toll
-                roads in just 7 years. What are some of the impact of these toll
-                roads?
+                Indonesia has managed to build 1,900 km of new toll nationwide roads in just 7 years. Most notably, a toll road that connects the island of Java. Let's look into the impact of these new routes.
               </p>
-              <p class="byline">By Stephanie Adeline</p>
-			
-			{:else if content.class === "about"}
-			<h2 class="about-head">About this project</h2>
+              <p class="byline">BY STEPHANIE ADELINE</p>
+            {:else if content.class === "about"}
+              <h2 class="about-head">About this project</h2>
               <p>
                 {@html content.text}
               </p>
@@ -68,6 +66,9 @@
                   class="inline-image"
                   src={"/assets/" + content.inline_image}
                 />
+                {#if content.image_source}
+                <p class="credit">Image credit: {@html content.image_source}</p>
+                {/if}
               {/if}
             {/if}
             {#if content.slider === "TRUE"}
@@ -93,10 +94,29 @@
                 />
               </div>
             {/if}
+            {#if content.datawrapper}
+              <div>
+                <script
+                  type="text/javascript"
+                  defer
+                  src={"https://datawrapper.dwcdn.net/" + content.datawrapper + "/embed.js?v=2"}
+                  charset="utf-8"
+                ></script><noscript
+                  ><img
+                    src={"https://datawrapper.dwcdn.net/" + content.datawrapper + "/full.png"}
+                    alt=""
+                  /></noscript
+                >
+
+                <!-- test test test -->
+              </div>
+            {/if}
+          {/if}
           </div>
         </section>
       {/each}
-  </Scroller>
+    </div></Scroller
+  >
 
   <!-- <LoremIpsum/>
 	
@@ -119,18 +139,6 @@
 		overflow: hidden;
 	} */
 
-  [slot="background"] p {
-    margin: 0;
-  }
-
-  [slot="foreground"] {
-    pointer-events: none;
-  }
-
-  [slot="foreground"] section {
-    pointer-events: all;
-  }
-
   section {
     margin: 0 0 0 auto;
     height: 120vh;
@@ -142,16 +150,16 @@
     /* margin: 0 0 2em 0; */
   }
 
-  section.paragraph {
-    max-width: 400px;
-  }
-  .inline-image {
-    max-width: 400px;
-    width: 100%;
+  section.about {
+    height: auto;
   }
 
-  section.headline {
-    max-width: 700px;
+  section.paragraph {
+    max-width: 500px;
+  }
+  .inline-image {
+    max-width: 500px;
+    width: 100%;
   }
 
   div.scroll-content {
@@ -160,6 +168,17 @@
   }
   div.scroll-content {
     padding: 20px;
+  }
+
+  section.headline {
+    max-width: 700px;
+  }
+
+  section.headline div {
+    background: rgb(3,101,84);
+    margin: 10px;
+    border: thick double white;
+    color: white;
   }
 
   section.paragraph div.scroll-content {
@@ -175,16 +194,16 @@
 
   h1 {
     margin: 0;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family:'Open Sans', Arial, Helvetica, sans-serif, sans-serif;
   }
 
   .deck {
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family:'Open Sans', Arial, Helvetica, sans-serif, sans-serif;
     font-size: 18px;
   }
 
   .byline {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   /* p {
@@ -203,5 +222,15 @@
     text-align: right;
   }
 
+  [slot="background"] {
+    pointer-events: none;
+  }
 
+  [slot="foreground"] {
+    pointer-events: none;
+  }
+  .credit {
+    font-size: 12px;
+    line-height: 14px;
+  }
 </style>

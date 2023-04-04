@@ -33,10 +33,15 @@
   let slideContent;
 
   let allLayerId = ["rest-areas", "toll-gates", "desa"];
-  let allLinesId = ["construction", "pantura", "brebes-timur", "industri-batang"];
+  let allLinesId = [
+    "construction",
+    "pantura",
+    "brebes-timur",
+    "industri-batang",
+  ];
   let allRaster = ["brebes-2014", "brebes-2020", "brebes-2020-annotated"];
 
-  let labelDivCollection =[]
+  let labelDivCollection = [];
 
   onMount(() => {
     const initialState = { lng: 110.5, lat: -6.8, zoom: 6.5 };
@@ -171,9 +176,9 @@
         type: "line",
         source: "industri-batang",
         paint: {
-          "line-color": "#333333",
-          "line-width": 1,
-          "line-opacity" : 0,
+          "line-color": "#ffffff",
+          "line-width": 4,
+          "line-opacity": 0,
         },
       });
       map.addLayer({
@@ -208,19 +213,19 @@
         id: "provinsi",
         type: "fill",
         source: "provinsi",
-        'paint': {
-        'fill-color': [
-          'interpolate',
-          ['linear'],
-          ['get', 'income'],
-          0,
-          '#A3DAB7',
-          
-          35,
-          '#25429A'
-        ],
-        'fill-opacity': 0,
-    }
+        paint: {
+          "fill-color": [
+            "interpolate",
+            ["linear"],
+            ["get", "income"],
+            0,
+            "#A3DAB7",
+
+            35,
+            "#25429A",
+          ],
+          "fill-opacity": 0,
+        },
       });
 
       map.addLayer({
@@ -263,7 +268,7 @@
         },
         paint: {
           "line-color": "#ef4123",
-          "line-width": 3,
+          "line-width": 7,
           "line-opacity": 0,
         },
       });
@@ -282,20 +287,23 @@
         },
       });
 
-      labelData.forEach(label => {
+      labelData.forEach((label) => {
         let labelDiv = document.createElement("div");
-          labelDiv.innerHTML += "<span class='text-label' style='line-height: 15px; font-size: 15px; font-weight: bold; padding:5px'>" + label.text + "</span>";
-          labelDiv.id = label.id;
-          labelDiv.style.opacity = 0;
-          labelDiv.style.color = "#ffffff";
+        labelDiv.innerHTML +=
+          "<span class='text-label' style='line-height: 15px; font-size: 15px; font-weight: bold; padding:5px'>" +
+          label.text +
+          "</span>";
+        labelDiv.id = label.id;
+        labelDiv.style.opacity = 0;
+        labelDiv.style.color = "#ffffff";
 
-          labelDivCollection.push(labelDiv);
+        labelDivCollection.push(labelDiv);
 
-          var marker = new maplibregl.Marker(labelDiv)
-            .setLngLat([label.lng, label.lat])
-            .addTo(map);
-      })
-      console.log(labelDivCollection)
+        var marker = new maplibregl.Marker(labelDiv)
+          .setLngLat([label.lng, label.lat])
+          .addTo(map);
+      });
+      console.log(labelDivCollection);
 
       // const labelDiv = document.createElement("div");
       //     labelDiv.innerHTML += "<span>Gerbang Tol Brebes Timur</span>";
@@ -305,7 +313,6 @@
       // var marker = new maplibregl.Marker(labelDiv)
       //       .setLngLat([109.0075963180483, -6.882611574480206])
       //       .addTo(map);
-
     });
   });
   onDestroy(() => {
@@ -441,35 +448,30 @@
       }
     }
     if (slideContent.labels_shown) {
-      labelDivCollection.forEach(div => {
+      labelDivCollection.forEach((div) => {
         if (slideContent.labels_shown.includes(div.id)) {
           div.style.opacity = 1;
           if (slideContent.label_color) {
             div.style.color = slideContent.label_color;
-            div.style.backgroundColor = "#ffffff"
+            div.style.backgroundColor = "#ffffff";
           } else {
             div.style.color = "#ffffff";
-            div.style.backgroundColor = "black"
+            div.style.backgroundColor = "black";
           }
         } else {
           div.style.opacity = 0;
         }
-      })
+      });
     } else {
-      labelDivCollection.forEach(div => {
-       
-          div.style.opacity = 0;
-        
-      })
+      labelDivCollection.forEach((div) => {
+        div.style.opacity = 0;
+      });
     }
 
     if (slideContent.show_choropleth === "TRUE") {
       map.setPaintProperty("provinsi", "fill-opacity", 0.95);
-
-
     } else {
       map.setPaintProperty("provinsi", "fill-opacity", 0);
-
     }
   }
 </script>
@@ -489,5 +491,4 @@
     width: 100%;
     height: 100%;
   }
-  
 </style>
