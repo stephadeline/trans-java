@@ -72,7 +72,7 @@
             {/if}
             {#if content.slider === "TRUE"}
               <div class="year-controls">
-                <div>{selectedYear}</div>
+                <div class="year-label">{selectedYear}</div>
                 <RangePlayback
                   min={1978}
                   max={2021}
@@ -198,11 +198,10 @@
     max-width: 700px;
   }
 
-  span.circle-gates {
-	height: 15px;
-  width: 15px;
-  background-color: #ef4123;
-  border-radius: 50%;
-  display: inline-block;
+  .year-label {
+    width: 60px;
+    text-align: right;
   }
+
+
 </style>

@@ -27,15 +27,22 @@
 </script>
 
 <input type="range" disabled={playing} {min} {max} bind:value />
-<button on:click={onClickButton}>{!playing ? '▶️' : '⏹️'}</button>
+<button on:click={onClickButton}><img src={!playing ? "/assets/play.png"  : "/assets/stop.png"} /></button>
 
 <style>
 	input {
 		width: 250px;
+		margin: 0;
 	}
 	button {
 		padding: 0;
+		margin: 0;
 		font-size: 30px;
 		line-height: 0;
+	}
+
+	img {
+		width: 20px;
+		height: 20px;
 	}
 </style>
