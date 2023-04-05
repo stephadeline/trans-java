@@ -20,7 +20,7 @@
   let rasterYear = 2020;
 </script>
 
-<div class="demo">
+<div class="content">
   <Scroller
     {top}
     {threshold}
@@ -30,7 +30,7 @@
     bind:offset
     bind:progress
   >
-    <div slot="background">
+    <div slot="background" class={"background-" + index}>
       <!-- <p>current section: <strong>{index + 1}/{count}</strong></p>
 			<progress value="{count ? (index + 1) / count : 0}"></progress>
 
@@ -127,6 +127,18 @@
 
 <!-- <p>This is an explanation</p> -->
 <style>
+  .content {
+    pointer-events: none;
+  }
+
+
+  [slot="background"] {
+    pointer-events: none;
+  }
+
+  [slot="foreground"] {
+    pointer-events: none;
+  }
   /* .demo {
 		padding: 0 100px 0 0;
 	} */
@@ -145,6 +157,7 @@
     /* background-color: rgba(0,0,0,0.5); */
     /* color: white; */
     padding: 1em;
+    pointer-events: none;
     /* background: white; */
 
     /* margin: 0 0 2em 0; */
@@ -171,7 +184,7 @@
   }
 
   section.headline {
-    max-width: 700px;
+    max-width: 650px;
   }
 
   section.headline div {
@@ -179,6 +192,7 @@
     margin: 10px;
     border: thick double white;
     color: white;
+    pointer-events: none;
   }
 
   section.paragraph div.scroll-content {
@@ -221,16 +235,12 @@
     width: 60px;
     text-align: right;
   }
-
-  [slot="background"] {
-    pointer-events: none;
-  }
-
-  [slot="foreground"] {
-    pointer-events: none;
-  }
   .credit {
     font-size: 12px;
     line-height: 14px;
+  }
+
+  .background-4 {
+    pointer-events: all;
   }
 </style>

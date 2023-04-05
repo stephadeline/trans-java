@@ -32,6 +32,8 @@
   let mapContainer;
   let slideContent;
 
+  let popupRestArea;
+
   let allLayerId = ["rest-areas", "toll-gates", "desa"];
   let allLinesId = [
     "construction",
@@ -53,7 +55,19 @@
       zoom: initialState.zoom,
     });
 
+    map.scrollZoom.disable();
+    map.dragPan.disable();
+    map.dragRotate.disable();
+    map.keyboard.disable();
+    map.doubleClickZoom.disable();
+    map.touchZoomRotate.disable();
+    map.touchPitch.disable();
+
     map.on("load", function () {
+      popupRestArea = new maplibregl.Popup({
+        closeButton: false,
+        closeOnClick: false,
+      });
       map.addSource("all_toll_roads", {
         type: "geojson",
         data: allTollRoadData,
@@ -473,11 +487,49 @@
     } else {
       map.setPaintProperty("provinsi", "fill-opacity", 0);
     }
+
+    if (index === 4) {
+      map.on("mouseenter", "rest-areas", function (e) {
+        // Change the cursor style as a UI indicator.
+        map.getCanvas().style.cursor = "pointer";
+
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var name = e.features[0].properties.keterangan
+        var resto = "<p><strong>Restaurants</strong>: " + e.features[0].properties.dftr_resto + "</p>"
+        var musho = "<p><strong>Prayer Room</strong>: " + e.features[0].properties.dftr_musho + "</p>"
+        var minimart = "<p><strong>Minimart</strong>: " + e.features[0].properties.dftr_minim + "</p>"
+        var bengkel = "<p><strong>Car Repair Shop</strong>: " + e.features[0].properties.dftr_bengk + "</p>"
+        var atm = "<p><strong>ATM</strong>: " + e.features[0].properties.dftr_atm + "</p>"
+        var spbu = e.features[0].properties.spbu
+        var gas = spbu === 1 ? "<p><strong>Gas Station</strong>: Yes</p>" : "<p><strong>Gas Station</strong>: No</p>"
+        var description = '<strong>' + name + '</strong>' + 
+        resto + musho + minimart + bengkel + atm + gas;
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        // Populate the popup and set its coordinates
+        // based on the feature found.
+        popupRestArea.setLngLat(coordinates).setHTML(description).addTo(map);
+      });
+
+      map.on("mouseleave", "rest-areas", function () {
+        map.getCanvas().style.cursor = "";
+        popupRestArea.remove();
+      });
+    } 
   }
 </script>
 
 <div class="map-wrap">
   <div class="map" id="map" bind:this={mapContainer} />
+  <div class="test">
+    THIS IS A MAP <button on:click={console.log("click")} />
+  </div>
 </div>
 
 <style>
@@ -490,5 +542,11 @@
     position: absolute;
     width: 100%;
     height: 100%;
+  }
+  .test {
+    z-index: 1000;
+    position: fixed;
+    left: 0;
+    bottom: 10;
   }
 </style>
