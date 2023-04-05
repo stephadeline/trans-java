@@ -1,12 +1,10 @@
 <script>
   import Map from "./components/Map.svelte";
-  import contentData from "./data/test-content-2.json";
+  import contentData from "./data/content.json";
   import RangePlayback from "./components/RangePlayback.svelte";
   import Switch from "./components/Switch.svelte";
 
   import Scroller from "@sveltejs/svelte-scroller";
-  // import LoremIpsum from './LoremIpsum.svelte';
-  // import DraggableLabel from './DraggableLabel.svelte';
 
   let count;
   let index;

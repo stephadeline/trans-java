@@ -1,26 +1,16 @@
 <script>
   import allTollRoadData from "./../data/java-toll-data.json";
-
   import provinsi from "./../data/provinsi.json";
-
   import labelData from "./../data/labels.json";
   import industriBatang from "./../data/kawasan-industri-batang.json";
-
   import restArea from "./../data/rest-area.json";
-
   import tollGates from "./../data/gerbang-tol.json";
-
   import brebesTimur from "./../data/brebes-timur.json";
-
   import underConstruction from "./../data/konstruksi.json";
-
   import pantura from "./../data/pantura-brebes.json";
-  import contentData from "./../data/test-content-2.json";
-
+  import contentData from "./../data/content.json";
   import desa from "./../data/desa.json";
-
   import { onMount, onDestroy } from "svelte";
-  // import { Map, NavigationControl, Popup, FlyToOptions } from 'maplibre-gl';
   import maplibregl from "maplibre-gl";
   import "maplibre-gl/dist/maplibre-gl.css";
 
@@ -31,9 +21,7 @@
   let map;
   let mapContainer;
   let slideContent;
-
   let popupRestArea;
-
   let allLayerId = ["rest-areas", "toll-gates", "desa"];
   let allLinesId = [
     "construction",
@@ -42,7 +30,6 @@
     "industri-batang",
   ];
   let allRaster = ["brebes-2014", "brebes-2020", "brebes-2020-annotated"];
-
   let labelDivCollection = [];
 
   onMount(() => {
@@ -317,16 +304,6 @@
           .setLngLat([label.lng, label.lat])
           .addTo(map);
       });
-      console.log(labelDivCollection);
-
-      // const labelDiv = document.createElement("div");
-      //     labelDiv.innerHTML += "<span>Gerbang Tol Brebes Timur</span>";
-
-      //     console.log(labelDiv)
-
-      // var marker = new maplibregl.Marker(labelDiv)
-      //       .setLngLat([109.0075963180483, -6.882611574480206])
-      //       .addTo(map);
     });
   });
   onDestroy(() => {
@@ -494,16 +471,42 @@
         map.getCanvas().style.cursor = "pointer";
 
         var coordinates = e.features[0].geometry.coordinates.slice();
-        var name = e.features[0].properties.keterangan
-        var resto = "<p><strong>Restaurants</strong>: " + e.features[0].properties.dftr_resto + "</p>"
-        var musho = "<p><strong>Prayer Room</strong>: " + e.features[0].properties.dftr_musho + "</p>"
-        var minimart = "<p><strong>Minimart</strong>: " + e.features[0].properties.dftr_minim + "</p>"
-        var bengkel = "<p><strong>Car Repair Shop</strong>: " + e.features[0].properties.dftr_bengk + "</p>"
-        var atm = "<p><strong>ATM</strong>: " + e.features[0].properties.dftr_atm + "</p>"
-        var spbu = e.features[0].properties.spbu
-        var gas = spbu === 1 ? "<p><strong>Gas Station</strong>: Yes</p>" : "<p><strong>Gas Station</strong>: No</p>"
-        var description = '<strong>' + name + '</strong>' + 
-        resto + musho + minimart + bengkel + atm + gas;
+        var name = e.features[0].properties.keterangan;
+        var resto =
+          "<p><strong>Restaurants</strong>: " +
+          e.features[0].properties.dftr_resto +
+          "</p>";
+        var musho =
+          "<p><strong>Prayer Room</strong>: " +
+          e.features[0].properties.dftr_musho +
+          "</p>";
+        var minimart =
+          "<p><strong>Minimart</strong>: " +
+          e.features[0].properties.dftr_minim +
+          "</p>";
+        var bengkel =
+          "<p><strong>Car Repair Shop</strong>: " +
+          e.features[0].properties.dftr_bengk +
+          "</p>";
+        var atm =
+          "<p><strong>ATM</strong>: " +
+          e.features[0].properties.dftr_atm +
+          "</p>";
+        var spbu = e.features[0].properties.spbu;
+        var gas =
+          spbu === 1
+            ? "<p><strong>Gas Station</strong>: Yes</p>"
+            : "<p><strong>Gas Station</strong>: No</p>";
+        var description =
+          "<strong>" +
+          name +
+          "</strong>" +
+          resto +
+          musho +
+          minimart +
+          bengkel +
+          atm +
+          gas;
 
         // Ensure that if the map is zoomed out such that multiple
         // copies of the feature are visible, the popup appears
@@ -521,7 +524,7 @@
         map.getCanvas().style.cursor = "";
         popupRestArea.remove();
       });
-    } 
+    }
   }
 </script>
 
@@ -533,7 +536,7 @@
   .map-wrap {
     position: relative;
     width: 100%;
-    height: 100vh; /* calculate height of the screen minus the heading */
+    height: 100vh; 
   }
   .map {
     position: absolute;
