@@ -238,7 +238,7 @@
     line-height: 14px;
   }
 
-  .background-4 {
+  /* .background-4 {
     pointer-events: all;
-  }
+  } */
 </style>
