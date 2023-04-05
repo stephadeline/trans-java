@@ -18,7 +18,7 @@
   let rasterYear = 2020;
 </script>
 
-<div class="content">
+<div class="content" class:bgclick={index === 4}>
   <Scroller
     {top}
     {threshold}
@@ -28,7 +28,7 @@
     bind:offset
     bind:progress
   >
-    <div slot="background" class={"background-" + index}>
+    <div slot="background">
       <!-- <p>current section: <strong>{index + 1}/{count}</strong></p>
 			<progress value="{count ? (index + 1) / count : 0}"></progress>
 
@@ -45,120 +45,109 @@
         <section class={content.class}>
           <div class="scroll-content">
             {#if content.text}
-            {#if content.class === "headline"}
-              <h1 class="headline">The Trans-Java Toll Road <img style="width: 30px; display: inline" src="/assets/jalan-tol.svg"/></h1>
-              <p class="deck">
-                Indonesia has managed to build 1,900 km of new toll nationwide roads in just 7 years. Most notably, a toll road that connects the island of Java. Let's look into the impact of these new routes.
-              </p>
-              <p class="byline">BY STEPHANIE ADELINE</p>
-            {:else if content.class === "about"}
-              <h2 class="about-head">About this project</h2>
-              <p>
-                {@html content.text}
-              </p>
-            {:else}
-              <p>{@html content.text}</p>
+              {#if content.class === "headline"}
+                <h1 class="headline">
+                  The Trans-Java Toll Road <img
+                    style="width: 30px; display: inline"
+                    src="/assets/jalan-tol.svg"
+                  />
+                </h1>
+                <p class="deck">
+                  Indonesia has managed to build 1,900 km of new toll nationwide
+                  roads in just 7 years. Most notably, a toll road that connects
+                  the island of Java. Let's look into the impact of these new
+                  routes.
+                </p>
+                <p class="byline">BY STEPHANIE ADELINE</p>
+              {:else if content.class === "about"}
+                <h2 class="about-head">About this project</h2>
+                <p>
+                  {@html content.text}
+                </p>
+              {:else}
+                <p>{@html content.text}</p>
 
-              {#if content.inline_image}
-                <img
-                  class="inline-image"
-                  src={"/assets/" + content.inline_image}
-                />
-                {#if content.image_source}
-                <p class="credit">Image credit: {@html content.image_source}</p>
+                {#if content.inline_image}
+                  <img
+                    class="inline-image"
+                    src={"/assets/" + content.inline_image}
+                  />
+                  {#if content.image_source}
+                    <p class="credit">
+                      Image credit: {@html content.image_source}
+                    </p>
+                  {/if}
                 {/if}
               {/if}
-            {/if}
-            {#if content.slider === "TRUE"}
-              <div class="year-controls">
-                <div class="year-label">{selectedYear}</div>
-                <RangePlayback
-                  min={1978}
-                  max={2021}
-                  bind:value={selectedYear}
-                />
-              </div>
-            {/if}
-            {#if content.raster_slider === "TRUE"}
-              <div class="year-controls">
-                <Switch
-                  bind:value={rasterYear}
-                  design="multi"
-                  label="Switch year"
-                  options={[
-                    content.raster_options[0],
-                    content.raster_options[1],
-                  ]}
-                />
-              </div>
-            {/if}
-            {#if content.datawrapper}
-              <div>
-                <script
-                  type="text/javascript"
-                  defer
-                  src={"https://datawrapper.dwcdn.net/" + content.datawrapper + "/embed.js?v=2"}
-                  charset="utf-8"
-                ></script><noscript
-                  ><img
-                    src={"https://datawrapper.dwcdn.net/" + content.datawrapper + "/full.png"}
-                    alt=""
-                  /></noscript
-                >
+              {#if content.slider === "TRUE"}
+                <div class="year-controls">
+                  <div class="year-label">{selectedYear}</div>
+                  <RangePlayback
+                    min={1978}
+                    max={2021}
+                    bind:value={selectedYear}
+                  />
+                </div>
+              {/if}
+              {#if content.raster_slider === "TRUE"}
+                <div class="year-controls">
+                  <Switch
+                    bind:value={rasterYear}
+                    design="multi"
+                    label="Switch year"
+                    options={[
+                      content.raster_options[0],
+                      content.raster_options[1],
+                    ]}
+                  />
+                </div>
+              {/if}
+              {#if content.datawrapper}
+                <div>
+                  <script
+                    type="text/javascript"
+                    defer
+                    src={"https://datawrapper.dwcdn.net/" +
+                      content.datawrapper +
+                      "/embed.js?v=2"}
+                    charset="utf-8"
+                  ></script><noscript
+                    ><img
+                      src={"https://datawrapper.dwcdn.net/" +
+                        content.datawrapper +
+                        "/full.png"}
+                      alt=""
+                    /></noscript
+                  >
 
-                <!-- test test test -->
-              </div>
+                  <!-- test test test -->
+                </div>
+              {/if}
             {/if}
-          {/if}
           </div>
         </section>
       {/each}
     </div></Scroller
   >
-
-  <!-- <LoremIpsum/>
-	
-	<DraggableLabel bind:value={top} label="top"/>
-	<DraggableLabel bind:value={threshold} label="threshold"/>
-	<DraggableLabel bind:value={bottom} label="bottom"/> -->
 </div>
 
-<!-- <p>This is an explanation</p> -->
 <style>
   .content {
     pointer-events: none;
   }
-
 
   [slot="background"] {
     pointer-events: none;
   }
 
   [slot="foreground"] {
-    pointer-events: none;
+    pointer-events: all;
   }
-  /* .demo {
-		padding: 0 100px 0 0;
-	} */
-
-  /* [slot="background"] {
-		background-color: rgba(255,62,0,0.05);
-		border-top: 2px solid #ff3e00;
-		border-bottom: 2px solid #ff3e00;
-		font-size: 1.4em;
-		overflow: hidden;
-	} */
 
   section {
     margin: 0 0 0 auto;
     height: 120vh;
-    /* background-color: rgba(0,0,0,0.5); */
-    /* color: white; */
     padding: 1em;
-    pointer-events: none;
-    /* background: white; */
-
-    /* margin: 0 0 2em 0; */
   }
 
   section.about {
@@ -186,7 +175,7 @@
   }
 
   section.headline div {
-    background: rgb(3,101,84);
+    background: rgb(3, 101, 84);
     margin: 10px;
     border: thick double white;
     color: white;
@@ -205,11 +194,11 @@
 
   h1 {
     margin: 0;
-    font-family:'Open Sans', Arial, Helvetica, sans-serif, sans-serif;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif, sans-serif;
   }
 
   .deck {
-    font-family:'Open Sans', Arial, Helvetica, sans-serif, sans-serif;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif, sans-serif;
     font-size: 18px;
   }
 
@@ -217,19 +206,14 @@
     font-size: 12px;
   }
 
-  /* p {
-    padding: 10px;
-  } */
   .about {
     background: white;
     pointer-events: all;
-
   }
   .about div {
     margin: auto;
     max-width: 700px;
     pointer-events: all;
-
   }
 
   .year-label {
@@ -241,7 +225,11 @@
     line-height: 14px;
   }
 
-  .background-4 {
+  .bgclick [slot="foreground"] {
+    pointer-events: none;
+  }
+
+  .bgclick [slot="background"] {
     pointer-events: all;
   }
 </style>

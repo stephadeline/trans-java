@@ -253,7 +253,7 @@
           "line-cap": "round",
         },
         paint: {
-          "line-color": "#FF8200",
+          "line-color": "#FFFFFF",
           "line-width": 3,
           "line-opacity": 0,
         },
