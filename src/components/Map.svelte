@@ -527,9 +527,6 @@
 
 <div class="map-wrap">
   <div class="map" id="map" bind:this={mapContainer} />
-  <div class="test">
-    THIS IS A MAP <button on:click={console.log("click")} />
-  </div>
 </div>
 
 <style>
@@ -542,11 +539,5 @@
     position: absolute;
     width: 100%;
     height: 100%;
-  }
-  .test {
-    z-index: 1000;
-    position: fixed;
-    left: 0;
-    bottom: 10;
   }
 </style>
