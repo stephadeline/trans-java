@@ -190,7 +190,6 @@
     margin: 10px;
     border: thick double white;
     color: white;
-    pointer-events: none;
   }
 
   section.paragraph div.scroll-content {
@@ -223,10 +222,14 @@
   } */
   .about {
     background: white;
+    pointer-events: all;
+
   }
   .about div {
     margin: auto;
     max-width: 700px;
+    pointer-events: all;
+
   }
 
   .year-label {
@@ -238,7 +241,7 @@
     line-height: 14px;
   }
 
-  /* .background-4 {
+  .background-4 {
     pointer-events: all;
-  } */
+  }
 </style>
