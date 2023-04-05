@@ -223,6 +223,7 @@
   .credit {
     font-size: 12px;
     line-height: 14px;
+    text-transform: uppercase;
   }
 
   .bgclick [slot="foreground"] {
