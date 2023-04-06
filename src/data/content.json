@@ -317,7 +317,7 @@
   },
   {
     "slide_index": 10,
-    "text": "However, the toll roads also caused positive impact on <strong>economic growth</strong> elsewhere. This is because along with its development, came the rest area and the toll gates.",
+    "text": "However, the toll roads also caused positive impact on <strong>economic growth</strong> elsewhere. This is because along with its development, came the rest area <span style=\"height: 10px; width: 10px; border: 1px solid #06BCC1; border-radius: 50%; display: inline-block;\"></span> and the toll gates <span style=\"height: 10px; width: 10px; border: 1px solid #ef4123; border-radius: 50%; display: inline-block;\"></span>.",
     "inline_image": "",
     "image_source": "",
     "datawrapper": "",
