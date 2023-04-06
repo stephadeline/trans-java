@@ -3,7 +3,6 @@
   import contentData from "./data/content.json";
   import RangePlayback from "./components/RangePlayback.svelte";
   import Switch from "./components/Switch.svelte";
-
   import Scroller from "@sveltejs/svelte-scroller";
 
   let count;
@@ -29,14 +28,6 @@
     bind:progress
   >
     <div slot="background">
-      <!-- <p>current section: <strong>{index + 1}/{count}</strong></p>
-			<progress value="{count ? (index + 1) / count : 0}"></progress>
-
-			<p>offset in current section</p>
-			<progress value={offset || 0}></progress>
-
-			<p>total progress</p>
-			<progress value={progress || 0}></progress> -->
       <Map {index} {selectedYear} {rasterYear} />
     </div>
 

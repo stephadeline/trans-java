@@ -32,6 +32,10 @@ I looked into the NDVI of the areas, using a buffer of the toll road but didn't 
 
 I also wanted to add tool tips for the routes and toll gates, but only had time to do for rest-areas.
 
+Further improvements could also include:
+- Optimizing the data and images, so that the performance is better.
+- Improving the interface on mobile, so that users can see the full map on mobile.
+
 ---
 
 # svelte app

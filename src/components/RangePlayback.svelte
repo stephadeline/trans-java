@@ -26,7 +26,7 @@
 	};
 </script>
 
-<input type="range" disabled={playing} {min} {max} bind:value />
+<input type="range" disabled={playing} {min} {max} step={1} bind:value />
 <button on:click={onClickButton}><img src={!playing ? "/assets/play.png"  : "/assets/stop.png"} /></button>
 
 <style>
