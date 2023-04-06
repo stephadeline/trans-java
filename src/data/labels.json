@@ -28,5 +28,41 @@
       "lng": 109.0206188,
       "lat": -6.85,
       "id": "pesantunan"
+    },
+    {
+      "text": "Yogyakarta",
+      "lng": 110.41601458433382,
+      "lat": -7.844388869091915,
+      "id": "jogja"
+    },
+    {
+      "text": "East Java",
+      "lng": 112.317296,
+      "lat": -7.663960,
+      "id": "east-java"
+    },
+    {
+      "text": "Central Java",
+      "lng": 110.124277,
+      "lat": -7.210723, 
+      "id": "central-java"
+    },
+    {
+      "text": "West Java",
+      "lng": 107.57279917498744,
+      "lat": -6.821603290826433,
+      "id": "west-java"
+    },
+    {
+      "text": "Jakarta",
+      "lng": 106.8456,
+      "lat": -6.2088,
+      "id": "jakarta"
+    },
+    {
+      "text": "Banten",
+      "lng": 106.09169748084365,
+      "lat":-6.425983164620028,  
+      "id": "banten"
     }
   ]

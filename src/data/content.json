@@ -533,7 +533,7 @@
   },
   {
     "slide_index": 16,
-    "text": "However, the toll road is still praised for having an overall positive impact on the economy. According to a <a href=\"https://www.kompas.id/baca/riset/2021/12/20/dampak-pembangunan-tol-trans-jawa-pada-perekonomian\">research by Kompas</a>, between 2016-2026, it is estimated that the development of the Trans Java toll road will bring an additional income of IDR 50.69 trillion to the six provinces in Java, with Central Java and East Java seeing the biggest increase in income.",
+    "text": "However, the toll road is still praised for having an overall positive impact on the economy. According to a <a href=\"https://www.kompas.id/baca/riset/2021/12/20/dampak-pembangunan-tol-trans-jawa-pada-perekonomian\">research by Kompas</a>, between 2016-2026, it is estimated that the development of the Trans Java toll road will bring an additional income of <strong>IDR 50.69 trillion</strong> to the six provinces in Java, with Central Java and East Java seeing the biggest gain.",
     "inline_image": "choropleth-key.png",
     "image_source": "",
     "datawrapper": "",
@@ -556,7 +556,14 @@
     "style": "",
     "rest_area_filters": "",
     "toll_gates_filters": "",
-    "labels_shown": "",
+    "labels_shown": [
+      "east-java",
+      "west-java",
+      "central-java",
+      "jakarta",
+      "banten",
+      "jogja"
+    ],
     "label_color": "",
     "show_choropleth": "TRUE"
   },
