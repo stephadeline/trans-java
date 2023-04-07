@@ -10,10 +10,10 @@
   import pantura from "./../data/pantura-brebes.json";
   import contentData from "./../data/content.json";
   import desa from "./../data/desa.json";
-  
-  import { onMount, onDestroy } from "svelte";
+    import { onMount, onDestroy } from "svelte";
   import maplibregl from "maplibre-gl";
   import "maplibre-gl/dist/maplibre-gl.css";
+
 
   export let selectedYear = 2014;
   export let rasterYear;
@@ -38,7 +38,7 @@
 
     map = new maplibregl.Map({
       container: mapContainer,
-      style: `https://api.maptiler.com/maps/bright-v2/style.json?key=LWQbv5QsKtTV1ZJnSbQf`,
+      style: `https://basemaps.cartocdn.com/gl/positron-gl-style/style.json`,
       center: [initialState.lng, initialState.lat],
       zoom: initialState.zoom,
     });
