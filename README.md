@@ -24,7 +24,7 @@ Data to create the choropleth map of additional income earned by province was ob
 
 Further satellite image timelapses were obtained from Google Earth Pro.
 
-This page was built using Svelte, using the [svelte-scroller](https://github.com/sveltejs/svelte-scroller). The main scrolly code is in [App.svelte](https://github.com/stephadeline/trans-java/blob/main/src/App.svelte) and maps were built using MapLibre in the [Map.svelte](https://github.com/stephadeline/trans-java/blob/main/src/components/Map.svelte) file. To display/hide certain layers by slide index, I used the paint property and opacity. The style is from MapTiler.
+This page was built using Svelte, using the [svelte-scroller](https://github.com/sveltejs/svelte-scroller). The main scrolly code is in [App.svelte](https://github.com/stephadeline/trans-java/blob/main/src/App.svelte) and maps were built using MapLibre in the [Map.svelte](https://github.com/stephadeline/trans-java/blob/main/src/components/Map.svelte) file. To display/hide certain layers by slide index, I used the paint property and opacity. The style is from Carto.
 
 The content for the text was created in a [Google Sheet](https://docs.google.com/spreadsheets/d/1aHVn_qIDBXCEVmpZCjRrOSiN5d58kjkRxQ4x2t_nChU/edit?usp=sharing) which was then converted to Json and stored in the [data folder](https://github.com/stephadeline/trans-java/tree/main/src/data), along with other geojson files.
 
